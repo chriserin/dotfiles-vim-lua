@@ -11,3 +11,8 @@ cmd('CopyPath', "let @+=expand('%:h')", {})
 cmd('CopyFileName', "let @+=expand('%:t')", {})
 
 cmd('RefreshJsonSchemas', utils.download_json_schemas, {})
+cmd('Plugins', "edit ~/.config/nvim/lua/plugins/init.lua", {})
+cmd('Mappings', "edit ~/.config/nvim/lua/core/mappings.lua", {})
+cmd('Commands', "edit ~/.config/nvim/lua/core/commands.lua", {})
+cmd('VimNotes', "edit ~/.config/nvim/vim-notes.txt", {})
+cmd('LuaNotes', "edit ~/.config/nvim/lua/lua-notes.lua", {})

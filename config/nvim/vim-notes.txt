@@ -1,0 +1,5 @@
+
+
+how do I get Gread to save automatically?
+How do I get K to navigate to vim help?
+How do I get a better pager into vim?

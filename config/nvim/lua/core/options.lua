@@ -54,7 +54,7 @@ opt.splitright = true
 -- to write a swp file.
 opt.updatetime = 100
 
--- should make scrolling faster
+-- should make scrolling faster - is this handled by the scrolling plugin?
 opt.ttyfast = true
 opt.lazyredraw = true
 
@@ -98,6 +98,7 @@ local tmpdir = string.format('%s/.vim/tmp, ', vim.env.HOME)
 -- set where swap file and undo/backup files are saved
 opt.backupdir = tmpdir
 opt.directory = tmpdir
+opt.swapfile = false
 
 -- persistent undo between file reloads
 if vim.fn.has 'persistent_undo' then
@@ -153,7 +154,7 @@ opt.viewoptions:remove 'options'
 -- treat dash separated words as a word text object
 opt.iskeyword:append '-'
 
--- set pum background visibility to 20 percent
+-- set pum background visibility to 20 percent - pum stands for "popup-menu"
 opt.pumblend = 20
 
 -- set file completion in command to use pum

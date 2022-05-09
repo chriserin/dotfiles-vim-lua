@@ -337,7 +337,7 @@ return packer.startup(function(use)
   use { 'camspiers/animate.vim' }
 
   --  auto-generate ctags on save
-  use { 'jsfaint/gen_tags.vim' }
+  -- use { 'jsfaint/gen_tags.vim' }
 
   -- " show trailing white spaces and allow deleting them
   use 'ntpeters/vim-better-whitespace'
@@ -378,6 +378,8 @@ return packer.startup(function(use)
       require('core.mappings').undotree_mappings()
     end,
   }
+
+  use 'jlanzarotta/bufexplorer'
 
   -- Rust support
   use { 'rust-lang/rust.vim', ft = { 'rust' } }
