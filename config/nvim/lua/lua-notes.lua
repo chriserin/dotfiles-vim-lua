@@ -1,6 +1,7 @@
 
 
 -- This file is me lernin some lua
+-- Comment code with `--` ... obviously
 
 print 'hi'
 
