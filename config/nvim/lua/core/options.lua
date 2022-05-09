@@ -52,7 +52,7 @@ opt.splitright = true
 -- used by a bunch of plugins to perform async actions (e.g. gitsigns)
 -- when the user stopped typing. Also used by vim to decide when
 -- to write a swp file.
-opt.updatetime = 100
+opt.updatetime = 1000
 
 -- should make scrolling faster - is this handled by the scrolling plugin?
 opt.ttyfast = true
