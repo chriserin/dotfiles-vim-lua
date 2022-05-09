@@ -57,6 +57,8 @@ local modules = {
   'core.commands',
   'core.autocmds',
   'core.mappings',
+  'cerin.options',
+  'cerin.commands',
   'plugins',
 }
 

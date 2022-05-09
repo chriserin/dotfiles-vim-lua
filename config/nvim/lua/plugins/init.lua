@@ -535,6 +535,8 @@ require('lazy').setup({
     keys = core_mappings.undotree_mappings,
   },
 
+  use 'jlanzarotta/bufexplorer'
+
   --  Indent lines (visual indication)
   {
     'lukas-reineke/indent-blankline.nvim',
@@ -650,6 +652,7 @@ require('lazy').setup({
         end,
       })
     end,
+    enable = false
   },
 
   -- fuzzy find things
