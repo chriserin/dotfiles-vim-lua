@@ -144,3 +144,6 @@
 ; https://git-scm.com/docs/git-config#_includes
 [include]
   path = ~/.gitconfig.local
+[user]
+	email = chris.erin@gmail.com
+	name = Chris Erin
