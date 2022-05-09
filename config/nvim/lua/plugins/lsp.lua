@@ -51,56 +51,20 @@ M.setup = function()
       -- Install LSP servers automatically
       -- LSP server configuration please see: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 
-      -- zig
-      zls = {},
-
-      -- Arduino
-      arduino_language_server = {},
-
-      -- cmake
-      cmake = {},
-
-      -- Elm
-      elmls = {},
-
       -- Markdown
       prosemd_lsp = {},
 
       -- SQL
       sqlls = {},
 
-      -- Erlang
-      erlangls = {},
-
       -- HTML snippets
       emmet_ls = {},
-
-      -- TOML
-      taplo = {},
-
-      -- C, CPP
-      clangd = {},
-
-      -- C, CPP, Arduino
-      ccls = {},
-
-      -- Rust
-      rust_analyzer = {},
 
       -- TypeScript and JavaScript
       tsserver = {},
 
-      -- Ruby
-      solargraph = {},
-
       -- Dockerfile
       dockerls = {},
-
-      -- Terraform
-      terraformls = {},
-
-      -- Ansible
-      ansiblels = {},
 
       -- JSON
       jsonls = require 'plugins.lsp.jsonls',
@@ -126,9 +90,6 @@ M.setup = function()
 
       -- HTML
       html = {},
-
-      -- Golang
-      gopls = {},
 
       -- Bash
       bashls = {},

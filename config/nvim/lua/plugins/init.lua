@@ -193,6 +193,7 @@ return packer.startup(function(use)
   -- pretty buffers
   use {
     'akinsho/bufferline.nvim',
+    disable = true,
     requires = { 'kyazdani42/nvim-web-devicons' },
     config = function()
       require('plugins.bufferline').setup()
@@ -341,10 +342,10 @@ return packer.startup(function(use)
   use { 'tpope/vim-endwise' }
 
   -- window animations
-  use { 'camspiers/animate.vim' }
+  use { 'camspiers/animate.vim', disable = true }
 
   --  auto-generate ctags on save
-  use { 'jsfaint/gen_tags.vim' }
+  -- use { 'jsfaint/gen_tags.vim' }
 
   -- " show trailing white spaces and allow deleting them
   use 'ntpeters/vim-better-whitespace'
@@ -383,6 +384,8 @@ return packer.startup(function(use)
     end,
   }
 
+  use 'jlanzarotta/bufexplorer'
+
   -- Rust support
   use { 'rust-lang/rust.vim', ft = { 'rust' } }
 
@@ -412,6 +415,7 @@ return packer.startup(function(use)
     config = function()
       require('cinnamon').setup()
     end,
+    disable = true
   }
 
   -- fuzzy finder (still used by a lot of small workflows I built FzfRg,
