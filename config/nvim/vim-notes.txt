@@ -3,3 +3,31 @@
 how do I get Gread to save automatically?
 How do I get K to navigate to vim help?
 How do I get a better pager into vim?
+What plugin is putting those tab like things in the top bar?  Is that lualine?
+what is turning on colorcolumn?
+
+This `Function body is nested too deep (max depth is 2, was 3)` conflicts with
+formatter?
+
+What is turning on autowrap for text files?
+
+Why don't I get a delete prompt for swapfiles?
+
+How do I turn off lsp warnings in the code space - I want to see them on hover.
+
+Saving with an elixir error takes me to an error window, I would like to turn
+this off
+
+How do I turn off autoformat or reduce the format time
+
+What plugin added the elixir test stub?
+
+Why is the Jumplist F'd?
+
+Where does <Leader>T come from?  What plugin is facilitating that?
+
+How can I go from %{"somestring" => 1} to %{somestring: 1} and vice versa
+
+How to not see the LSP Installing messages on vim start?
+
+List plugins with `:PackerStatus`
