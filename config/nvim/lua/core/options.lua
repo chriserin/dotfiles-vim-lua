@@ -30,6 +30,7 @@ opt.smartindent = true
 
 -- text appearance
 opt.textwidth = 80 --  set row width size in    charcters
+opt.colorcolumn = ""
 opt.wrap = false
 opt.list = true --  show invisible characters
 opt.listchars = 'tab:»·,trail:·,nbsp:·' --  Display        extra   whitespace
