@@ -1,6 +1,7 @@
 local cmd = vim.api.nvim_create_user_command
 local utils = require 'core.utils'
 
+cmd('SqlFormat', "!sqlformat -a %", {})
 cmd('PrettyPrintJSON', '%!jq', {})
 cmd('PrettyPrintXML', '!tidy -mi -xml -wrap 0 %', {})
 cmd('PrettyPrintHTML', '!tidy -mi -xml -wrap 0 %', {})
