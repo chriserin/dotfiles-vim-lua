@@ -334,7 +334,7 @@ return packer.startup(function(use)
   use { 'tpope/vim-endwise' }
 
   -- window animations
-  use { 'camspiers/animate.vim' }
+  use { 'camspiers/animate.vim', disable = true }
 
   --  auto-generate ctags on save
   -- use { 'jsfaint/gen_tags.vim' }
@@ -410,6 +410,7 @@ return packer.startup(function(use)
     config = function()
       require('cinnamon').setup()
     end,
+    disable = true
   }
 
   -- fuzzy finder (still used by a lot of small workflows I built FzfRg,
