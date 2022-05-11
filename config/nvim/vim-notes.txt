@@ -29,3 +29,8 @@ How can I go from %{"somestring" => 1} to %{somestring: 1} and vice versa
 How to not see the LSP Installing messages on vim start?
 
 List plugins with `:PackerStatus`
+
+How do I run a javascript test file?
+
+let g:test#javascript#jest#file_pattern = '\v.*test\.(js|jsx|coffee|ts|tsx)$'
+:echo test#javascript#jest#test_file("something.test.js")
