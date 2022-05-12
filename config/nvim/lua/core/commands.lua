@@ -22,3 +22,5 @@ cmd('VimNotes', "edit ~/.config/nvim/vim-notes.txt", {})
 cmd('LuaNotes', "edit ~/.config/nvim/lua/lua-notes.lua", {})
 cmd('Zsh', "edit ~/.zshrc", {})
 cmd('ZshLocal', "edit ~/.zshrc.local", {})
+
+cmd("PackerEdit", "lua require('core.utils').edit_plugin(<f-args>)", {complete = require("packer").plugin_complete, nargs = 1})

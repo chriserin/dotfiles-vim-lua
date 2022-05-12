@@ -115,4 +115,11 @@ function M.left_pad(str, len, char)
   return res, res ~= str
 end
 
+function M.edit_plugin(plugin_name)
+  local packer = require('packer')
+  local packer_root = packer.config.package_root
+
+  vim.cmd('edit ' .. packer_root .. '/packer/start/' ..  plugin_name)
+end
+
 return M
