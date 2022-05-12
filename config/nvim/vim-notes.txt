@@ -34,3 +34,6 @@ How do I run a javascript test file?
 
 let g:test#javascript#jest#file_pattern = '\v.*test\.(js|jsx|coffee|ts|tsx)$'
 :echo test#javascript#jest#test_file("something.test.js")
+
+How to turn off indent lines for system copy+pasting? (or other ways to get
+buffers to my mac)
