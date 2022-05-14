@@ -39,5 +39,39 @@ require('core.utils').edit_plugin("vim-rsi")
 
 vim.pretty_print(require('core.utils'))
 
+-- "un-require module"
 package.loaded['core.utils'] = nil
 vim.pretty_print(package.loaded['core.utils'])
+
+open_glow('~/oss/dotfiles/README.md')
+
+
+local birds = {'cardinal', 'crow', 'canary'}
+
+print(birds.concat())
+
+local open_glow = function(path)
+  vim.cmd("edit term://glow " .. path)
+end
+
+local normalizePath = function(path)
+  if(path == nil) then
+    return vim.fn.expand('%')
+  else
+    return path
+  end
+end
+
+EchoFile = function(path)
+  print(normalizePath(path))
+end
+
+-- use file system for command completion
+vim.api.nvim_create_user_command("EchoFile", "lua EchoFile(<f-args>)", {complete = 'file', nargs = '?'})
+
+Glow = function(path)
+  local normalizedPath = normalizePath(path)
+  open_glow(normalizedPath)
+end
+
+vim.api.nvim_create_user_command("Glow", "lua Glow(<f-args>)", {complete = 'file', nargs = '?'})
