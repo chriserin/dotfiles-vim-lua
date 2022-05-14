@@ -37,3 +37,5 @@ let g:test#javascript#jest#file_pattern = '\v.*test\.(js|jsx|coffee|ts|tsx)$'
 
 How to turn off indent lines for system copy+pasting? (or other ways to get
 buffers to my mac)
+- :let g:indent_blankline_enabled=v:false
+- 
