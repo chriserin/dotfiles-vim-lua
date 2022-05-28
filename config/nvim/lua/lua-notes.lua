@@ -67,6 +67,8 @@ EchoFile = function(path)
   print(normalizePath(path))
 end
 
+vim.keymap.set('v', '<leader>m', "\"my:lua SendToMaple()<cr>")
+
 -- use file system for command completion
 vim.api.nvim_create_user_command("EchoFile", "lua EchoFile(<f-args>)", {complete = 'file', nargs = '?'})
 
@@ -76,3 +78,11 @@ Glow = function(path)
 end
 
 vim.api.nvim_create_user_command("Glow", "lua Glow(<f-args>)", {complete = 'file', nargs = '?'})
+
+SendToMaple = function()
+  local mreg = vim.fn.getreg('m')
+  local command = "!setmaplebuffer " .. "\"" .. vim.fn.shellescape(mreg, 1) .. "\""
+  vim.api.nvim_command(command)
+end
+
+vim.keymap.set('v', '<leader>m', "\"my:lua SendToMaple()<cr>")
