@@ -19,3 +19,5 @@ cmd(
 )
 
 cmd("Glow", "lua require('cerin.utils').glow(<f-args>)", {complete = 'file', nargs = '?'})
+
+cmd('W', ':noa write', {})
