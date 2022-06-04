@@ -782,6 +782,7 @@ require('lazy').setup({
   -- Resize tmux panes and Vim windows with ease.
   { 'RyanMillerC/better-vim-tmux-resizer', event = 'VeryLazy' },
 
+  { 'jgdavey/tslime.vim' },
   -- notifications
   {
     'rcarriga/nvim-notify',
