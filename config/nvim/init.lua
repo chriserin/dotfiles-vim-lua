@@ -72,3 +72,5 @@ end
 
 -- Load project specific vimrc
 require('core.utils').load_local_vimrc()
+
+require('cerin.jest_runner')

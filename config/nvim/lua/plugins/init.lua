@@ -866,6 +866,7 @@ require('lazy').setup({
     },
   },
 
+  { 'jgdavey/tslime.vim' },
   -- notifications
   {
     'rcarriga/nvim-notify',
