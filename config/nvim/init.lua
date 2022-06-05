@@ -60,6 +60,7 @@ local modules = {
   'core.mappings',
   'cerin.options',
   'cerin.commands',
+  'cerin.mappings',
   'plugins',
 }
 
@@ -72,5 +73,3 @@ end
 
 -- Load project specific vimrc
 require('core.utils').load_local_vimrc()
-
-require('cerin.jest_runner')
