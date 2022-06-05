@@ -1,4 +1,6 @@
 
+local M = {}
+
 local describe_it_query = [[
   (call_expression
       function: (identifier) @x (#eq? @x "describe")
@@ -15,7 +17,15 @@ local describe_it_query = [[
   ) @describe-block
 ]]
 
-local function get_tests()
+-- Captures are indexed in the order they appear in the query
+-- 1 - @x
+-- 2 - @describe-name
+-- 3 - @y
+-- 4 - @it-name
+-- 5 - @it-block
+-- 6 - @describe-block
+
+function M.get_tests()
   local bnr = vim.api.nvim_get_current_buf()
   local q = require("vim.treesitter.query")
   local language_tree = vim.treesitter.get_parser(bnr, 'javascript')
@@ -65,8 +75,8 @@ local function get_tests()
   return result;
 end
 
-local function find_test_string()
-  local tests = get_tests()
+function M.find_test_string()
+  local tests = M.get_tests()
   local line_num = vim.api.nvim_win_get_cursor(0)[1]
 
   for _, test in ipairs(tests) do
@@ -76,16 +86,17 @@ local function find_test_string()
   end
 end
 
-local function get_output_string()
-  local test_string = find_test_string()
+function M.get_output_string()
+  local test_string = M.find_test_string()
   local file = vim.fn.expand('%:p')
 
   return "yarn test " .. file .. " -t \"" .. test_string .. "\""
 end
 
-function RunJestTest()
-  local yarn_string = get_output_string()
+function M.run_jest_test()
+  local yarn_string = M.get_output_string()
   vim.api.nvim_command(':Tmux ' .. yarn_string)
 end
 
-vim.keymap.set('n', '<leader>j', ":lua RunJestTest()<cr>")
+
+return M
