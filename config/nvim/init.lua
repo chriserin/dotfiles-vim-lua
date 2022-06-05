@@ -60,6 +60,7 @@ local modules = {
   'core.mappings',
   'cerin.options',
   'cerin.commands',
+  'cerin.mappings',
 }
 
 for _, module in ipairs(modules) do
@@ -112,5 +113,3 @@ require('lazy').setup({
 
 -- Load project specific vimrc
 require('core.utils').load_local_vimrc()
-
-require('cerin.jest_runner')
