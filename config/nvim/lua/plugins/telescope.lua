@@ -165,6 +165,9 @@ M.setup = function()
   end
 
   apply_highlights()
+
+  require('core.mappings').telescope_mappings()
+  require('cerin.mappings').telescope_mappings()
 end
 
 return M
