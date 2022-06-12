@@ -24,17 +24,24 @@ local describe_it_query = [[
 -- 4 - @it-name
 -- 5 - @it-block
 -- 6 - @describe-block
+--
+local function get_parser_language()
+  local bnr = vim.api.nvim_get_current_buf()
+  local ft = vim.api.nvim_buf_get_option(bnr, "filetype")
+  return require("nvim-treesitter.parsers").ft_to_lang(ft)
+end
 
 function M.get_tests()
   local bnr = vim.api.nvim_get_current_buf()
+  local parser_language = get_parser_language()
   local q = require("vim.treesitter.query")
-  local language_tree = vim.treesitter.get_parser(bnr, 'javascript')
+  local language_tree = vim.treesitter.get_parser(bnr, parser_language)
   local syntax_tree = language_tree:parse()
 
   local root = syntax_tree[1]:root()
 
   local result = {}
-  local query = vim.treesitter.parse_query('javascript', describe_it_query)
+  local query = vim.treesitter.parse_query(parser_language, describe_it_query)
 
   for _, captures, _ in query:iter_matches(root, bnr) do
     local test_table = {
@@ -77,6 +84,10 @@ end
 
 function M.find_test_string()
   local tests = M.get_tests()
+  if (#tests == 0) then
+    return "no-tests"
+  end
+
   local line_num = vim.api.nvim_win_get_cursor(0)[1]
 
   for _, test in ipairs(tests) do
@@ -84,19 +95,35 @@ function M.find_test_string()
       return test.test_string
     end
   end
+
+  return ""
 end
 
 function M.get_output_string()
   local test_string = M.find_test_string()
+  if (test_string == "no-tests") then
+    return "no-tests"
+  end
+
   local file = vim.fn.expand('%:p')
 
-  return "yarn test " .. file .. " -t \"" .. test_string .. "\""
+  return "yarn --cwd=assets test " .. file .. " -t \"" .. test_string .. "\""
 end
 
 function M.run_jest_test()
-  local yarn_string = M.get_output_string()
-  vim.api.nvim_command(':Tmux ' .. yarn_string)
-end
+  local parser_language = get_parser_language()
 
+  if not (parser_language == "tsx" or parser_language == "javascript") then
+    print("Not a jest language")
+    return
+  end
+
+  local yarn_string = M.get_output_string()
+  if (yarn_string == "no-tests") then
+    print("No jest tests")
+  else
+    vim.api.nvim_command(':Tmux ' .. yarn_string)
+  end
+end
 
 return M
