@@ -18,6 +18,8 @@ M.setup = function()
       ----------------------
       --   Code Actions   --
       ----------------------
+      b.code_actions.eslint_d,
+      b.code_actions.shellcheck,
       b.code_actions.gomodifytags,
 
       ----------------------
@@ -29,10 +31,11 @@ M.setup = function()
         disabled_filetypes = { 'NvimTree' },
       },
 
+      b.diagnostics.eslint_d,
       b.diagnostics.rubocop,
       b.diagnostics.yamllint,
       b.diagnostics.zsh,
-      require 'plugins.null-ls.commitlint',
+      -- require 'plugins.null-ls.commitlint',
 
       ----------------------
       --    Formatters    --
