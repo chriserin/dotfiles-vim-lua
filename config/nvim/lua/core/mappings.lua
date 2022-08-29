@@ -336,6 +336,63 @@ M.neogen_mappings = {
 }
 
 ---@type LazyKeysSpec[]
+M.telescope_mappings = {
+  -- muscle memory
+  { '<C-p>', telescope 'find_files', default_opts },
+  { '<C-b>', telescope 'buffers', default_opts },
+
+  -- Compatible with hydra setup
+  { '<leader>f/', telescope 'current_buffer_fuzzy_find', desc = 'Buffer fuzzy find' },
+  { '<leader>f:', telescope 'commands', desc = 'Command search' },
+  { '<leader>f;', telescope 'command_history', desc = 'Command History' },
+  { '<leader>f?', telescope 'search_history', desc = 'Search History' },
+  { '<leader>ff', telescope 'find_files', desc = '[F]ind [F]iles' },
+  { '<leader>fg', telescope 'live_grep', desc = '[F]ind w/ [G]rep' },
+  { '<leader>fh', telescope 'help_tags', desc = '[F]ind [H]elp' },
+  { '<leader>fk', telescope 'keymaps', desc = '[F]ind [K]eymaps' },
+  { '<leader>fo', telescope 'oldfiles', desc = '[F]ind [o]ld files' },
+  { '<leader>fO', telescope 'vim_options', desc = '[F]ind [O]ptions' },
+  { '<leader>fr', '<cmd>Telescope frecency workspace=CWD<CR>', desc = '[F][R]ecency' },
+  { '<leader>fd', require('plugins.telescope.setup').find_dotfiles, desc = '[F]ind [D]otfiles' },
+  { '<leader>fs', telescope 'git_status', desc = '[F]ind (Git) [S]tatus' },
+  { '<leader>fw', telescope 'grep_string', desc = '[F]ind [W]ord' },
+
+  --  Extensions
+  { '<leader>fb', '<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>', desc = '[F]ile [B]rowser' },
+
+  { '<leader>lg', telescope 'live_grep', desc = '[L]ive [G]rep' },
+  { '<leader>bb', telescope 'buffers', desc = 'Find Buffers' },
+
+  -- better spell suggestions
+  { 'z=', telescope 'spell_suggest', desc = 'Spelling Suggestions' },
+
+  -- Git
+  -- bc = buffer commits (like gitv!)
+  { '<leader>bc', telescope 'git_bcommits', desc = '[B]uffer [C]ommits' },
+
+  -- LSP
+  -- ds = document symbols
+  { '<leader>ds', telescope 'lsp_document_symbols', desc = '[D]ocument [S]ymbols' },
+
+  -- { '<leader>cc', '<cmd>Telescope conventional_commits<cr>', desc = '[C]onventional [C]ommits' },
+
+  -- search unicode symbols 
+  { '<leader>fu', '<cmd>Telescope symbols<cr>', desc = '[F]ind [U]nicode' },
+  {
+    '<C-q>',
+    '<cmd>Telescope symbols<cr>',
+    mode = 'i',
+    desc = '[F]ind [U]nicode',
+  },
+}
+
+---@type LazyKeysSpec[]
+M.blame_nvim_mappings = {
+  -- Git Blame
+  { '<leader>gb', ':BlameToggle<CR>', desc = '[G]it [B]lame' },
+}
+
+---@type LazyKeysSpec[]
 M.gen_nvim_mappings = {
   { '<leader>ai', ':Gen<CR>', mode = { 'n', 'v' }, desc = 'AI tools using Ollama' },
   { '<leader>aa', ':Gen Ask<CR>', mode = { 'n', 'v' }, desc = '[A]I [A]sk' },
