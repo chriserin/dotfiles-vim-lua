@@ -299,7 +299,7 @@ M.telescope_mappings = {
   -- ds = document symbols
   { '<leader>ds', telescope 'lsp_document_symbols', desc = '[D]ocument [S]ymbols' },
 
-  { '<leader>cc', '<cmd>Telescope conventional_commits<cr>', desc = '[C]onventional [C]ommits' },
+  -- { '<leader>cc', '<cmd>Telescope conventional_commits<cr>', desc = '[C]onventional [C]ommits' },
 
   -- search unicode symbols 
   { '<leader>fu', '<cmd>Telescope symbols<cr>', desc = '[F]ind [U]nicode' },
