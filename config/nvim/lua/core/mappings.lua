@@ -117,7 +117,8 @@ nmap { '<leader>=', ':wincmd =<cr>', { desc = 'Rebalance window sizes' } }
 nmap { '<leader>wo', '<c-w>o', { desc = 'Close other windows' } }
 
 -- Switch between the last two files
-nmap { '<tab><tab>', '<c-^>', { desc = 'Switch between alternate buffers' } }
+
+--nmap { '<tab><tab>', '<c-^>' }
 
 -- copy to end of line
 nmap { 'Y', 'y$', { desc = 'Yank to EOL' } }

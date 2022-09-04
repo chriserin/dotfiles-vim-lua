@@ -27,7 +27,7 @@ augroup('Firenvim', {
 -- share data between nvim instances (registers etc)
 augroup('Shada', {
   {
-    event = { 'CursorHold', 'TextYankPost', 'FocusGained', 'FocusLost' },
+    event = { 'TextYankPost', 'FocusGained', 'FocusLost' },
     pattern = { '*' },
     command = "if exists(':rshada') | rshada | wshada | endif",
   },
