@@ -149,5 +149,5 @@
 [include]
   path = ~/.gitconfig.local
 [user]
-	email = chris.erin@gmail.com
 	name = Chris Erin
+	email = chris.erin@gmail.com
