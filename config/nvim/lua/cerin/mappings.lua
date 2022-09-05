@@ -10,7 +10,10 @@ vim.keymap.set({ 'n', 'v', 'o' }, 'K', require('cerin.tree-climber').goto_prev, 
 vim.keymap.set('n', '<c-k>', require('cerin.tree-climber').swap_prev, default_opts)
 vim.keymap.set('n', '<c-j>', require('cerin.tree-climber').swap_next, default_opts)
 vim.keymap.set('n', '<leader>j', require('cerin.tsquery_jest_runner').run_jest_test, default_opts)
+
 nmap { '<leader>cc', require('cerin.utils').close_all_float_windows, default_opts }
+nmap { 'gt', require('cerin.utils').filter_out_noise, default_opts }
+nmap { 'gT', require('cerin.utils').filter_in_noise, default_opts }
 
 local M = {}
 
