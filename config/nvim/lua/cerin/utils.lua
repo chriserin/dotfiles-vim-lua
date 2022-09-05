@@ -29,9 +29,24 @@ function M.close_all_float_windows()
     local config = vim.api.nvim_win_get_config(win)
     if config.relative ~= '' then
       vim.api.nvim_win_close(win, false)
-      print('Closing window', win)
     end
   end
+end
+
+function M.filter_out_noise()
+  require('indent_blankline.commands').disable()
+  vim.opt_local.number = false
+  require('gitsigns.config').config.signcolumn = false
+  require('gitsigns.actions').refresh()
+  vim.diagnostic.hide()
+end
+
+function M.filter_in_noise()
+  require('indent_blankline.commands').enable()
+  vim.opt_local.number = true
+  require('gitsigns.config').config.signcolumn = true
+  require('gitsigns.actions').refresh()
+  vim.diagnostic.show()
 end
 
 return M
