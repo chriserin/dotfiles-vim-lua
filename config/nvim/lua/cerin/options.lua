@@ -9,3 +9,9 @@ opt.colorcolumn = ''
 -- for some reason a low value here (like 100) will screw up the jumplist on
 -- ctrl-o
 -- opt.updatetime = 1000
+
+-- reload the initial file after plugin eval to ensure all ft settings get set.
+-- This allows the netrw ft to get setl nomod and to be hidden.
+vim.schedule(function()
+  vim.cmd 'edit .'
+end)
