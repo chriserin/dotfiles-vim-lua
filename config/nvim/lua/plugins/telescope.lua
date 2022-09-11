@@ -1,3 +1,5 @@
+local layout_actions = require 'telescope.actions.layout'
+
 local default = {
   defaults = {
     results_title = false,
@@ -38,6 +40,19 @@ local default = {
     color_devicons = true,
     use_less = true,
     set_env = { ['COLORTERM'] = 'truecolor' },
+    preview = {
+      hide_on_startup = true,
+    },
+    mappings = {
+      i = {
+        ['<C-h>'] = 'which_key',
+        ['<C-v>'] = layout_actions.toggle_preview,
+      },
+      n = {
+        ['<C-h>'] = 'which_key',
+        ['<C-v>'] = layout_actions.toggle_preview,
+      },
+    },
   },
   pickers = {
     find_files = {
