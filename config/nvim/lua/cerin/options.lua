@@ -15,3 +15,5 @@ opt.colorcolumn = ''
 vim.schedule(function()
   vim.cmd 'edit .'
 end)
+
+vim.g.qf_auto_quit = 0
