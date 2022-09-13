@@ -13,7 +13,7 @@ opt.colorcolumn = ''
 -- reload the initial file after plugin eval to ensure all ft settings get set.
 -- This allows the netrw ft to get setl nomod and to be hidden.
 vim.schedule(function()
-  vim.cmd 'edit .'
+  vim.cmd 'buffer 1'
 end)
 
 vim.g.qf_auto_quit = 0
