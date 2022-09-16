@@ -96,6 +96,8 @@ M.setup = function()
   end)
 
   require('plugins.mason').setup()
+
+  require('lspconfig').tailwindcss.setup { autostart = false }
 end
 
 return M
