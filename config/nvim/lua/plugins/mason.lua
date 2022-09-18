@@ -134,6 +134,7 @@ M.setup = function()
               -- Get the language server to recognize the `vim` global
               globals = { 'vim' },
               unusedLocalExclude = { '_*' },
+              disable = { 'trailing-space' },
             },
             workspace = {
               -- Make the server aware of Neovim runtime files
