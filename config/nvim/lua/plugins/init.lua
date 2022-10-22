@@ -392,7 +392,7 @@ require('lazy').setup({
   'tpope/vim-vinegar',
 
   -- automatically adjusts 'shiftwidth' and 'expandtab' heuristically
-  'tpope/vim-sleuth',
+  { 'tpope/vim-sleuth' , enabled = false},
 
   -- ruby gem info directly in a Gemfile
   { 'alexbel/vim-rubygems', ft = { 'ruby' } },
