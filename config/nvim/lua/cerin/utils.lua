@@ -4,7 +4,13 @@ function M.edit_plugin(plugin_name)
   local packer = require 'packer'
   local packer_root = packer.config.package_root
 
-  vim.cmd('edit ' .. packer_root .. '/packer/start/' .. plugin_name)
+  local entries = vim.fs.find(plugin_name, { path = packer_root })
+
+  if #entries > 0 then
+    vim.cmd('edit ' .. entries[1])
+  else
+    print('could not find the packer plugin ' .. plugin_name)
+  end
 end
 
 local open_glow = function(path)
