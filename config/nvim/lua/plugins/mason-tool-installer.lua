@@ -54,6 +54,7 @@ M.setup = function()
       'prosemd-lsp',
       'rust-analyzer',
       'solargraph',
+      'pyright',
       'sqlls',
       'tailwindcss-language-server',
       'taplo',
