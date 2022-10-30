@@ -61,6 +61,7 @@ local modules = {
   'cerin.options',
   'cerin.commands',
   'cerin.mappings',
+  'cerin.autocmds',
 }
 
 for _, module in ipairs(modules) do
