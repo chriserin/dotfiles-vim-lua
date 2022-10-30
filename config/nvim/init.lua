@@ -60,6 +60,7 @@ local modules = {
   'cerin.options',
   'cerin.commands',
   'cerin.mappings',
+  'cerin.autocmds',
   'plugins',
 }
 
