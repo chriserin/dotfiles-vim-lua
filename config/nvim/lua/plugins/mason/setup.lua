@@ -188,6 +188,16 @@ M.setup = function()
       }
     end,
 
+    ['pyright'] = function()
+      local opts = {
+        settings = {
+          venvPath = './',
+          venv = '.venv',
+        },
+      }
+      lspconfig.pyright.setup(opts)
+    end,
+
     -- JSON
     jsonls = function()
       local overrides = require 'plugins.lsp.jsonls'
