@@ -17,3 +17,4 @@ vim.schedule(function()
 end)
 
 vim.g.qf_auto_quit = 0
+-- vim.lsp.set_log_level 'INFO'
