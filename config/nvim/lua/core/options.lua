@@ -136,3 +136,5 @@ end
 
 -- highlight the 80 character column
 opt.colorcolumn = '80'
+
+g.python3_host_prog = 'python3.9'

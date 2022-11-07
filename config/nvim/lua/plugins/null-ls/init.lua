@@ -83,6 +83,16 @@ M.setup = function()
       },
       b.formatting.shfmt,
       b.formatting.stylua,
+      -- python
+      b.diagnostics.flake8.with {
+        command = '.venv/bin/flake8',
+      },
+      b.formatting.isort.with {
+        command = '.venv/bin/isort',
+      },
+      b.formatting.black.with {
+        command = '.venv/bin/black',
+      },
     },
     on_attach = function(client)
       if client.supports_method 'textDocument/formatting' then
