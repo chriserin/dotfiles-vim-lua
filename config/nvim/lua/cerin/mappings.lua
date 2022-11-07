@@ -7,8 +7,9 @@ local default_opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<leader>j', require('cerin.tsquery_jest_runner').run_jest_test, default_opts)
 
 nmap { '<leader>cc', require('cerin.utils').close_all_float_windows, default_opts }
-nmap { 'gt', require('cerin.utils').filter_out_noise, default_opts }
-nmap { 'gT', require('cerin.utils').filter_in_noise, default_opts }
+nmap { '<leader>gq', require('cerin.utils').filter_out_noise, default_opts }
+nmap { '<leader>gQ', require('cerin.utils').filter_in_noise, default_opts }
+nmap { '<leader>dd', require('cerin.utils').print_diagnostic, default_opts }
 
 local M = {}
 

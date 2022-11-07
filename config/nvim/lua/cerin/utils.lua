@@ -55,4 +55,8 @@ function M.filter_in_noise()
   vim.diagnostic.show()
 end
 
+function M.print_diagnostic()
+  vim.pretty_print(vim.diagnostic.get_next())
+end
+
 return M
