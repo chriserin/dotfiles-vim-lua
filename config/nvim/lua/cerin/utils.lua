@@ -52,7 +52,7 @@ function M.filter_in_noise()
   vim.opt_local.number = true
   require('gitsigns.config').config.signcolumn = true
   require('gitsigns.actions').refresh()
-  vim.diagnostic.show()
+  vim.diagnostic.show(nil, 0, nil, nil)
 end
 
 function M.print_diagnostic()
