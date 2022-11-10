@@ -56,7 +56,7 @@ function M.filter_in_noise()
 end
 
 function M.print_diagnostic()
-  vim.pretty_print(vim.diagnostic.get_next())
+  print('Source: ' .. vim.diagnostic.get_next().source)
 end
 
 return M
