@@ -59,4 +59,9 @@ function M.print_diagnostic()
   print('Source: ' .. vim.diagnostic.get_next().source)
 end
 
+function M.set_log_level(log_level)
+  print('LOG LEVEL ' .. log_level)
+  vim.lsp.set_log_level(log_level)
+end
+
 return M
