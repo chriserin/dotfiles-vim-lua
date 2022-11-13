@@ -34,8 +34,10 @@ M.setup = function()
       b.diagnostics.eslint_d,
       b.diagnostics.rubocop,
       b.diagnostics.yamllint,
+      b.diagnostics.shellcheck,
       b.diagnostics.zsh,
       -- require 'plugins.null-ls.commitlint',
+      b.diagnostics.cfn_lint,
 
       ----------------------
       --    Formatters    --
