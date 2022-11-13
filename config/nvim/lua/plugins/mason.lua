@@ -121,7 +121,7 @@ M.setup = function()
     -- YAML
     ['yamlls'] = function()
       local overrides = require('plugins.lsp.yamlls').setup()
-      lspconfig.yamlls.setup(overrides)
+      -- lspconfig.yamlls.setup(overrides)
     end,
 
     -- Lua
