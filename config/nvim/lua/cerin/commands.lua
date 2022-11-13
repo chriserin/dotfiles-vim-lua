@@ -24,3 +24,5 @@ cmd('W', ':noa write', {})
 
 cmd('DisableIndentLines', "lua require('indent_blankline.commands').disable()", {})
 cmd('EnableIndentLines', "lua require('indent_blankline.commands').enable()", {})
+
+cmd('LspLogLevel', "lua require('cerin.utils').set_log_level(<f-args>)", { nargs = 1 })
