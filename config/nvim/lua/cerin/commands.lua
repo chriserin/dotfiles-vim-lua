@@ -12,12 +12,6 @@ cmd('LuaNotes', 'edit ~/.config/nvim/lua/lua-notes.lua', {})
 cmd('Zsh', 'edit ~/.zshrc', {})
 cmd('ZshLocal', 'edit ~/.zshrc.local', {})
 
-cmd(
-  'PackerEdit',
-  "lua require('cerin.utils').edit_plugin(<f-args>)",
-  { complete = require('packer').plugin_complete, nargs = 1 }
-)
-
 cmd('Glow', "lua require('cerin.utils').glow(<f-args>)", { complete = 'file', nargs = '?' })
 
 cmd('W', ':noa write', {})
