@@ -493,6 +493,12 @@ require('lazy').setup({
     end,
   },
 
+<<<<<<< HEAD
+=======
+  -- window animations
+  { 'camspiers/animate.vim', enabled = false },
+
+>>>>>>> c85d035 (Prefer enabled to enable)
   -- show trailing white spaces and automatically delete them on write
   {
     'zakharykaplan/nvim-retrail',
@@ -652,7 +658,7 @@ require('lazy').setup({
         end,
       })
     end,
-    enable = false
+    enabled = false,
   },
 
   -- fuzzy find things
