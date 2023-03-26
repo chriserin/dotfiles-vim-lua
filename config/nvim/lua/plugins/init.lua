@@ -535,7 +535,7 @@ require('lazy').setup({
     keys = core_mappings.undotree_mappings,
   },
 
-  use 'jlanzarotta/bufexplorer'
+  { 'jlanzarotta/bufexplorer' },
 
   --  Indent lines (visual indication)
   {
