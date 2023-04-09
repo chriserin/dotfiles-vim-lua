@@ -22,3 +22,4 @@ cmd('EnableIndentLines', "lua require('indent_blankline.commands').enable()", {}
 cmd('LspLogLevel', "lua require('cerin.utils').set_log_level(<f-args>)", { nargs = 1 })
 
 cmd('GRW', ':Gread | noa W', { nargs = 0 })
+cmd('Sync', ':Lazy sync', { nargs = 0 })
