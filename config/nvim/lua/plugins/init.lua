@@ -20,7 +20,7 @@ require('lazy').setup({
       -- file path completion
       'hrsh7th/cmp-path',
       -- command line completion
-      'hrsh7th/cmp-cmdline',
+      'chriserin/cmp-cmdline',
       -- neovim lua config api completion
       'hrsh7th/cmp-nvim-lua',
       -- emoji completion (triggered by `:`)
