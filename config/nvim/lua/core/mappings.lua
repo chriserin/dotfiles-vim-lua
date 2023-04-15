@@ -436,6 +436,10 @@ M.fugitive_mappings = function()
   nmap { '<leader>gS', ':Gwrite<CR>', { silent = true, desc = '[G]it [S]tage' } }
   nmap { '<leader>gw', ':Gwrite<CR>', { silent = true, desc = '[G]it [W]rite' } }
 
+  -- Git Blame
+  vmap { '<leader>gb', ':Git blame<CR>', { desc = '[G]it [B]lame' } }
+  nmap { '<leader>gB', ':Git blame<CR>', { desc = '[G]it [B]lame' } }
+
   --  Revert file
   nmap { '<Leader>gR', ':Gread<CR>', { silent = true, desc = '[G]it [R]ead (reverts file)' } }
 end
