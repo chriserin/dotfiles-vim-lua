@@ -307,8 +307,8 @@ M.fugitive_mappings = function()
   nmap { '<leader>gS', ':Gwrite<CR>', { desc = '[G]it [S]tage' } }
 
   -- Git Blame
-  nmap { '<leader>gb', ':Git blame<CR>', { desc = '[G]it [B]lame' } }
   vmap { '<leader>gb', ':Git blame<CR>', { desc = '[G]it [B]lame' } }
+  nmap { '<leader>gB', ':Git blame<CR>', { desc = '[G]it [B]lame' } }
 
   --  Revert file
   nmap { '<Leader>gR', ':Gread<CR>', { desc = '[G]it [R]ead (reverts file)' } }
@@ -458,6 +458,7 @@ M.gitsigns_mappings = function(bufnr)
   -- Undo Stage Hunk
   nmap { '<leader>gu', ':Gitsigns undo_stage_hunk<CR>', { buffer = bufnr, desc = '[G]it [U]ndo Stage Hunk' } }
   vmap { '<leader>gu', ':Gitsigns undo_stage_hunk<CR>', { buffer = bufnr, desc = '[G]it [U]ndo Stage Hunk' } }
+  nmap { '<leader>gb', ':Gitsigns blame_line<CR>', { buffer = bufnr, desc = '[G]it [b]lame' }}
 
   -- Text object for git hunks (e.g. vih will select the hunk)
   map { { 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<CR>' }
