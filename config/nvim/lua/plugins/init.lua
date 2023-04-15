@@ -719,7 +719,7 @@ require('lazy').setup({
     cmd = 'Rg',
     init = function()
       -- allow hidden files to be searched and smart case
-      vim.g.rg_command = 'rg --vimgrep --hidden --smart-case'
+      vim.g.rg_command = "rg --vimgrep --hidden -g '!.git/' -g '!*.lock'  --smart-case"
       vim.g.rg_highlight = 1
     end,
     keys = core_mappings.ripgrep_mappings,
