@@ -78,6 +78,22 @@ augroup('Auto Resume', {
   },
 })
 
+augroup('NeoAI', {
+  {
+    event = { 'FileType' },
+    pattern = { 'neoai-input' },
+    command = function()
+      vim.api.nvim_buf_set_keymap(
+        0,
+        'n',
+        '<leader>ns',
+        '<cmd>lua require("neoai.ui").submit_prompt()<CR>',
+        { desc = 'Submit the neoai input' }
+      )
+    end,
+  },
+})
+
 augroup('General Improvements', {
   -- Vim/tmux layout rebalancing
   -- automatically rebalance windows on vim resize
