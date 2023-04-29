@@ -1,6 +1,9 @@
 -- put global event listeners here
 
 local augroup = require('core.utils').augroup
+local nmap = function(tbl)
+  vim.keymap.set('n', tbl[1], tbl[2], tbl[3])
+end
 
 -- automatic spell check for some file types
 augroup('SetSpell', {
@@ -74,22 +77,6 @@ augroup('Auto Resume', {
       if not (ft == 'gitcommit') and not_in_event_handler then
         vim.fn.execute 'normal g`"'
       end
-    end,
-  },
-})
-
-augroup('NeoAI', {
-  {
-    event = { 'FileType' },
-    pattern = { 'neoai-input' },
-    command = function()
-      vim.api.nvim_buf_set_keymap(
-        0,
-        'n',
-        '<leader>ns',
-        '<cmd>lua require("neoai.ui").submit_prompt()<CR>',
-        { desc = 'Submit the neoai input' }
-      )
     end,
   },
 })
