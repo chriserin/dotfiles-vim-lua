@@ -256,6 +256,20 @@ require('lazy').setup({
     end,
   },
 
+  -- Github
+  {
+    'pwntester/octo.nvim',
+    dev = true,
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
+      'nvim-tree/nvim-web-devicons',
+    },
+    config = function()
+      require('octo').setup { diff_focus = 'right' }
+    end,
+  },
+
   -- Visual git gutter (also used by feline)
   {
     'lewis6991/gitsigns.nvim',
@@ -392,7 +406,7 @@ require('lazy').setup({
   'tpope/vim-vinegar',
 
   -- automatically adjusts 'shiftwidth' and 'expandtab' heuristically
-  { 'tpope/vim-sleuth' , enabled = false},
+  { 'tpope/vim-sleuth', enabled = false },
 
   -- ruby gem info directly in a Gemfile
   { 'alexbel/vim-rubygems', ft = { 'ruby' } },
@@ -858,7 +872,29 @@ require('lazy').setup({
     config = function()
       require('neoai').setup {
         -- Options go here
+        shortcuts = {
+          {
+            name = 'rtt',
+            key = '<leader>at',
+            desc = 'NeoAI create test for react component',
+            use_context = true,
+            prompt = [[
+                    Please write tests for this component using jest and react testing
+                    library with a describe function and it functions
+                ]],
+            modes = { 'v' },
+            strip_function = nil,
+          },
+        },
       }
     end,
+  },
+}, {
+  dev = {
+    -- directory where you store your local plugin projects
+    path = '~/oss',
+    ---@type string[] plugins that match these patterns will use your local versions instead of being fetched from GitHub
+    patterns = {}, -- For example {"folke"}
+    fallback = false, -- Fallback to git when local plugin doesn't exist
   },
 })
