@@ -1,5 +1,3 @@
-local layout_actions = require 'telescope.actions.layout'
-
 local default = {
   defaults = {
     results_title = false,
@@ -42,16 +40,6 @@ local default = {
     set_env = { ['COLORTERM'] = 'truecolor' },
     preview = {
       hide_on_startup = true,
-    },
-    mappings = {
-      i = {
-        ['<C-h>'] = 'which_key',
-        ['<C-v>'] = layout_actions.toggle_preview,
-      },
-      n = {
-        ['<C-h>'] = 'which_key',
-        ['<C-v>'] = layout_actions.toggle_preview,
-      },
     },
   },
   pickers = {
@@ -164,6 +152,20 @@ end
 
 M.setup = function()
   local telescope = require 'telescope'
+  local layout_actions = require 'telescope.actions.layout'
+
+  local mappings = {
+    i = {
+      ['<C-h>'] = 'which_key',
+      ['<C-v>'] = layout_actions.toggle_preview,
+    },
+    n = {
+      ['<C-h>'] = 'which_key',
+      ['<C-v>'] = layout_actions.toggle_preview,
+    },
+  }
+
+  default.defaults.mappings = mappings
 
   ---@diagnostic disable-next-line: redundant-parameter
   telescope.setup(default)
@@ -180,9 +182,6 @@ M.setup = function()
   end
 
   apply_highlights()
-
-  require('core.mappings').telescope_mappings()
-  require('cerin.mappings').telescope_mappings()
 end
 
 return M
