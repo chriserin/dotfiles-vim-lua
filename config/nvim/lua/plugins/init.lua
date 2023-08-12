@@ -211,7 +211,7 @@ require('lazy').setup({
   -- modern vim command line replacement, requires nvim 0.9 or higher
   {
     'folke/noice.nvim',
-    enabled = true,
+    enabled = false,
     event = 'VeryLazy',
     opts = {
       lsp = {
