@@ -256,19 +256,19 @@ require('lazy').setup({
     end,
   },
 
-  -- Github
-  {
-    'pwntester/octo.nvim',
-    dev = true,
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'nvim-telescope/telescope.nvim',
-      'nvim-tree/nvim-web-devicons',
-    },
-    config = function()
-      require('octo').setup { diff_focus = 'right' }
-    end,
-  },
+  -- -- Github
+  -- {
+  --   'pwntester/octo.nvim',
+  --   dev = true,
+  --   dependencies = {
+  --     'nvim-lua/plenary.nvim',
+  --     'nvim-telescope/telescope.nvim',
+  --     'nvim-tree/nvim-web-devicons',
+  --   },
+  --   config = function()
+  --     require('octo').setup { diff_focus = 'right' }
+  --   end,
+  -- },
 
   -- Visual git gutter (also used by feline)
   {

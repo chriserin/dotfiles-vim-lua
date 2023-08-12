@@ -13,11 +13,11 @@ nmap { '<leader>dd', require('cerin.utils').print_diagnostic, default_opts }
 
 local M = {}
 
-M.telescope_mappings = function()
-  nmap { '<leader>fc', require('cerin.telescope').find_controllers, default_opts }
-  nmap { '<leader>fv', require('cerin.telescope').find_views, default_opts }
-  nmap { '<leader>fj', require('cerin.telescope').find_js_files, default_opts }
-  nmap { '<leader>ft', require('cerin.telescope').find_js_test_files, default_opts }
-end
+-- M.telescope_mappings = function()
+--   nmap { '<leader>fc', require('cerin.telescope').find_controllers, default_opts }
+--   nmap { '<leader>fv', require('cerin.telescope').find_views, default_opts }
+--   nmap { '<leader>fj', require('cerin.telescope').find_js_files, default_opts }
+--   nmap { '<leader>ft', require('cerin.telescope').find_js_test_files, default_opts }
+-- end
 
 return M
