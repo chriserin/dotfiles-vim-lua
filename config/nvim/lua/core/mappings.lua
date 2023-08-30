@@ -212,6 +212,7 @@ M.lsp_mappings = function()
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   nmap { '<leader>D', vim.lsp.buf.type_definition, { buffer = true, desc = 'Type [D]ef' } }
   map { { 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, { buffer = true, desc = '[C]ode [A]ction' } }
+  nmap { 'gr', vim.lsp.buf.references, { buffer = true, desc = '[G]o to [R]eferences' } }
   nmap { 'K', vim.lsp.buf.hover, { buffer = true, desc = 'LSP Hover Doc' } }
   nmap { '<leader>rn', vim.lsp.buf.rename, { buffer = true, desc = '[R]e[n]ame Symbol Under Cursor' } }
   nmap { '<Leader>lh', function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end, { desc = "toggle in[l]ay [h]ints" }}
