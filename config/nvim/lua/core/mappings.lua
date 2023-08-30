@@ -166,7 +166,7 @@ M.lsp_mappings = function()
   nmap { 'gi', vim.lsp.buf.implementation, { buffer = true, desc = '[G]o to [I]mplementation' } }
   nmap { '<leader>D', vim.lsp.buf.type_definition, { buffer = true, desc = 'Type [D]ef' } }
   map { { 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, { buffer = true, desc = '[C]ode [A]ction' } }
-  nmap { 'gr', telescope('lsp_references'), { buffer = true, desc = '[G]o to [R]eferences' } }
+  nmap { 'gr', vim.lsp.buf.references, { buffer = true, desc = '[G]o to [R]eferences' } }
   nmap { 'K', vim.lsp.buf.hover, { buffer = true, desc = 'LSP Hover Doc' } }
   nmap { '<leader>rn', vim.lsp.buf.rename, { desc = 'LSP rename' } }
 end
