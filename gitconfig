@@ -126,6 +126,11 @@
   algorithm = patience
   colorMoved = default
 
+[user]
+  name = Chris Erin
+  email = chris.erin@gmail.com
+[github]
+  user = chriserin
 [pull]
   rebase = true
 
