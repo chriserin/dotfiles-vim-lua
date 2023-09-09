@@ -148,6 +148,20 @@ require('lazy').setup({
     end,
   },
 
+  -- jump anywhere
+  {
+    'folke/flash.nvim',
+    enabled = false,
+    event = 'VeryLazy',
+    ---@diagnostic disable-next-line: undefined-doc-name
+    ---@type Flash.Config
+    opts = {
+      mode = 'fuzzy',
+      incremental = true,
+    },
+    keys = core_mappings.flash_mappings,
+  },
+
   --  pretty diagnostics, references, telescope results, quickfix and location
   --  list to help you solve all the trouble your code is causing.
   {
