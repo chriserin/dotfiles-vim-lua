@@ -137,6 +137,11 @@
   algorithm = histogram
   colorMoved = plain
 
+[user]
+  name = Chris Erin
+  email = chris.erin@gmail.com
+[github]
+  user = chriserin
 [pull]
   rebase = true
 
