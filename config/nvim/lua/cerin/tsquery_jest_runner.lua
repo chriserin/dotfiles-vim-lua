@@ -33,21 +33,21 @@ end
 function M.get_tests()
   local bnr = vim.api.nvim_get_current_buf()
   local parser_language = get_parser_language()
-  local q = require 'vim.treesitter.query'
+  local t = require 'vim.treesitter'
   local language_tree = vim.treesitter.get_parser(bnr, parser_language)
   local syntax_tree = language_tree:parse()
 
   local root = syntax_tree[1]:root()
 
   local result = {}
-  local query = vim.treesitter.parse_query(parser_language, describe_it_query)
+  local query = vim.treesitter.query.parse(parser_language, describe_it_query)
 
   for _, captures, _ in query:iter_matches(root, bnr) do
     local test_table = {
       describe_start = captures[6]:start(),
       describe_end = captures[6]:end_(),
-      describes = { q.get_node_text(captures[2], bnr) },
-      it = q.get_node_text(captures[4], bnr),
+      describes = { t.get_node_text(captures[2], bnr) },
+      it = t.get_node_text(captures[4], bnr),
       it_start = captures[5]:start(),
       it_end = captures[5]:end_(),
     }
@@ -109,7 +109,7 @@ function M.get_output_string()
 
   local file = vim.fn.expand '%:p'
 
-  return 'yarn --cwd=assets test ' .. file .. ' -t "' .. test_string .. '"'
+  return 'yt ' .. file .. ' -t "' .. test_string .. '"'
 end
 
 function M.run_jest_test()
