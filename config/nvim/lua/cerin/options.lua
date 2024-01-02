@@ -5,6 +5,10 @@ opt.swapfile = false
 
 -- turn off the color column.  I'm looking for less visual noise.
 opt.colorcolumn = ''
+opt.relativenumber = false
+
+-- turn off line breaking after a configured width
+opt.textwidth = 0
 
 -- for some reason a low value here (like 100) will screw up the jumplist on
 -- ctrl-o
