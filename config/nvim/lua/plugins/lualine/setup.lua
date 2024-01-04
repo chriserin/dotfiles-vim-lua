@@ -141,7 +141,6 @@ M.setup = function()
 
   ---@module "lualine"
   lualine.setup {
-<<<<<<< HEAD
     winbar = winbar,
     inactive_winbar = {
       lualine_a = {
