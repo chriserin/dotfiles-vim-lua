@@ -1766,7 +1766,13 @@
         }
       },
       "neovim": {
+<<<<<<< HEAD
         "version": "HEAD-7367838",
+||||||| parent of 84ef7d0 (install-updates)
+        "version": "HEAD-9dc4404",
+=======
+        "version": "0.9.4",
+>>>>>>> 84ef7d0 (install-updates)
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
