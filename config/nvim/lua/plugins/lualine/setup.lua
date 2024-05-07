@@ -218,6 +218,7 @@ M.setup = function()
       lualine_x = {},
     },
   }
+}
 end
 
 return M
