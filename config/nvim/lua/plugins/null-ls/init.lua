@@ -18,8 +18,8 @@ M.setup = function()
       ----------------------
       --   Code Actions   --
       ----------------------
-      b.code_actions.eslint_d,
-      b.code_actions.shellcheck,
+      -- b.code_actions.eslint_d,
+      -- b.code_actions.shellcheck,
       b.code_actions.gomodifytags,
 
       ----------------------
@@ -31,10 +31,10 @@ M.setup = function()
         disabled_filetypes = { 'NvimTree' },
       },
 
-      b.diagnostics.eslint_d,
+      -- b.diagnostics.eslint_d,
       b.diagnostics.rubocop,
       b.diagnostics.yamllint,
-      b.diagnostics.shellcheck,
+      -- b.diagnostics.shellcheck,
       b.diagnostics.zsh,
       -- require 'plugins.null-ls.commitlint',
       b.diagnostics.cfn_lint,
@@ -70,13 +70,13 @@ M.setup = function()
       b.formatting.black,
       b.formatting.shfmt,
       b.formatting.stylua,
-      b.formatting.xq.with {
-        extra_filetypes = { 'plist' },
-      },
+      -- b.formatting.xq.with {
+      --   extra_filetypes = { 'plist' },
+      -- },
       -- python
-      b.diagnostics.flake8.with {
-        command = '.venv/bin/flake8',
-      },
+      -- b.diagnostics.flake8.with {
+      --   command = '.venv/bin/flake8',
+      -- },
       b.formatting.isort.with {
         command = '.venv/bin/isort',
       },
