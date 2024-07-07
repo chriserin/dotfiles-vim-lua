@@ -25,3 +25,5 @@
 \set HISTCONTROL ignoredups
 \set COMP_KEYWORD_CASE upper
 \unset QUIET
+\echo 🧐 🐘 postgres_dba 6.0 installed. Use ":dba" to see menu
+\set dba '\\i /home/chris/postgres_dba/start.psql'
