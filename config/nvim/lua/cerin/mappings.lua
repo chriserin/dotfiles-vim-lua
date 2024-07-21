@@ -11,6 +11,7 @@ nmap { '<leader>gq', require('cerin.utils').filter_out_noise, default_opts }
 nmap { '<leader>gQ', require('cerin.utils').filter_in_noise, default_opts }
 nmap { '<leader>dd', require('cerin.utils').print_diagnostic, default_opts }
 
+nmap { '<leader>gh', ':Git log -- %<CR>', { desc = '[G]it file [h]istory' } }
 local M = {}
 
 -- M.telescope_mappings = function()
