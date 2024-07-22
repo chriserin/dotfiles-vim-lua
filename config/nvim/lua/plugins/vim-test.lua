@@ -5,6 +5,6 @@ return {
   keys = require('core.mappings').vim_test_mappings,
   dependencies = { 'preservim/vimux' },
   init = function()
-    vim.g['test#strategy'] = 'vimux'
+    vim.g['test#strategy'] = 'tslime'
   end,
 }
