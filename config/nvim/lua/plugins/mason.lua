@@ -8,6 +8,7 @@ return {
   dependencies = {
     -- handles connection of LSP Configs and Mason
     'williamboman/mason-lspconfig.nvim',
+    'WhoIsSethDaniel/mason-tool-installer.nvim',
 
     -- adds MasonUpdateAll
     'Zeioth/mason-extra-cmds',
