@@ -16,6 +16,7 @@ return {
       -- stabilizes this can be updated to 2.0.0 or removed
       version = '^1.0.0',
     },
+    'WhoIsSethDaniel/mason-tool-installer.nvim',
 
     -- adds MasonUpdateAll
     {
