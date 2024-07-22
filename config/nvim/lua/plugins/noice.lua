@@ -2,7 +2,7 @@
 ---@type LazySpec
 return {
   'folke/noice.nvim',
-  enabled = true,
+  enabled = false,
   event = 'VeryLazy',
   ---@type NoiceConfig
   opts = {
