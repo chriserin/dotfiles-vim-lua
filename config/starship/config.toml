@@ -2,6 +2,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 cmd_duration.format = "[$duration]($style) "
+aws.disabled = true
 
 # language plugins
 deno.disabled = true
