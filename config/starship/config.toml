@@ -12,6 +12,7 @@ cmd_duration.format = "[$duration]($style) "
 sudo.disabled = false
 lua.disabled = true
 rust.disabled = true
+aws.disabled = true
 
 [kubernetes]
 disabled = false
