@@ -43,6 +43,15 @@ sudo.disabled = false
 bun.disabled = true
 
 # to hide this from the prompt you can run kctx -u to unset the current context
+[username]
+format = "[$user]($style) "
+
+[git_branch]
+format = "[$symbol$branch(:$remote_branch)]($style) "
+
+[hostname]
+format = "[$ssh_symbol$hostname]($style) "
+
 [kubernetes]
 disabled = false
 style = "bright-blue"
