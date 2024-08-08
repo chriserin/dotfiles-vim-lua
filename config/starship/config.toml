@@ -1,7 +1,6 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
-
 format = """
 $username\
 $hostname\
@@ -33,6 +32,7 @@ elixir.disabled = true
 erlang.disabled = true
 gcloud.disabled = true
 golang.disabled = true
+aws.disabled = true
 lua.disabled = true
 nodejs.disabled = true
 package.disabled = true
