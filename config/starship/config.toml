@@ -14,6 +14,15 @@ lua.disabled = true
 rust.disabled = true
 aws.disabled = true
 
+[username]
+format = "[$user]($style) "
+
+[git_branch]
+format = "[$symbol$branch(:$remote_branch)]($style) "
+
+[hostname]
+format = "[$ssh_symbol$hostname]($style) "
+
 [kubernetes]
 disabled = false
 detect_env_vars = ["KUBECONFIG"]
