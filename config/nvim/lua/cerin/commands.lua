@@ -3,7 +3,7 @@ local cmd = vim.api.nvim_create_user_command
 cmd('SqlFormat', '!sqlformat -a %', {})
 
 -- easy access commands
-cmd('Plugins', 'edit ~/.config/nvim/lua/plugins/init.lua', {})
+cmd('Plugins', 'edit ~/.config/nvim/lua/plugins/', {})
 cmd('Mappings', 'edit ~/.config/nvim/lua/core/mappings.lua', {})
 cmd('Commands', 'edit ~/.config/nvim/lua/core/commands.lua', {})
 cmd('Options', 'edit ~/.config/nvim/lua/core/options.lua', {})
