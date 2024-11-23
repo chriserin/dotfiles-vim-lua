@@ -254,6 +254,21 @@ M.setup = function()
       }
     end,
 
+    gopls = function()
+      lspconfig.gopls.setup {
+        settings = {
+          gopls = {
+            codelenses = {
+              generate = true,
+              gc_details = true,
+            },
+            staticcheck = true,
+            gofumpt = true,
+          },
+        },
+      }
+    end,
+
     -- TypeScript
     ts_ls = function()
       lspconfig.ts_ls.setup {
