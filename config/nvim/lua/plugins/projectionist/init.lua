@@ -53,6 +53,17 @@ return {
           alternate = { 'src/{}.rs' },
         },
       },
+      -- Go
+      ['go.mod'] = {
+        ['*_test.go'] = {
+          alternate = '{}.go',
+          type = 'test',
+        },
+        ['*.go'] = {
+          alternate = '{}_test.go',
+          type = 'source',
+        },
+      },
       --
       -- BEGIN mod for PDQ codebase
       ['mix.exs'] = {
