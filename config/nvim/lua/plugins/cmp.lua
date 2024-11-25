@@ -42,11 +42,11 @@ return {
     local lspkind_present, lspkind = pcall(require, 'lspkind')
 
     if not luasnip_present or not lspkind_present then
-      return false
+      return
     end
 
     if not cmp then
-      return false
+      return
     end
 
     local has_words_before = function()
@@ -115,6 +115,7 @@ return {
       },
 
       formatting = {
+        expandable_indicator = true,
         fields = { 'kind', 'abbr', 'menu' },
         format = lspkind.cmp_format {
           mode = 'symbol_text', -- show only symbol annotations
@@ -251,7 +252,7 @@ return {
     })
 
     local function delay(fn, time)
-      local timer = vim.loop.new_timer()
+      local timer = vim.uv.new_timer()
       timer:start(
         time,
         0,
