@@ -329,7 +329,7 @@ alias tgd='tv git-diff'
 alias tscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
 
 # tmux attach
-alias ta='tmux attach -t'
+alias ta='tmux attach-session -t'
 
 # ripgrep - rg is taken by rails generate alias from the oh-my-zsh rails plugin
 alias rgrep='command rg'
