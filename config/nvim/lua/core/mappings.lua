@@ -756,6 +756,7 @@ M.snack_mappings = {
 
   -- LSP
   { "<leader>rf", function() Snacks.rename.rename_file() end, desc = "Rename File" },
+  { "<leader>nh", function() Snacks.notifier.show_history() end, desc = "Notification History" },
   { "]r",         function() Snacks.words.jump(vim.v.count1) end, desc = "Next Reference" },
   { "[r",         function() Snacks.words.jump(-vim.v.count1) end, desc = "Prev Reference" },
   { "gai", picker('lsp_incoming_calls'), desc = "C[a]lls Incoming" },
