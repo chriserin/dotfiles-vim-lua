@@ -19,7 +19,7 @@ return {
       javascript = prettier,
       javascriptreact = prettier,
       markdown = prettier,
-      go = { 'gofmt', 'goimports' },
+      go = { 'gofmt', 'goimports', timeout_ms = 1000 },
       ruby = { 'rubyfmt', 'rubocop' },
       sql = { 'pg_format' },
       yaml = prettier,
