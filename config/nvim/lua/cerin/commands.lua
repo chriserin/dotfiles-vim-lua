@@ -23,3 +23,13 @@ cmd('LspLogLevel', "lua require('cerin.utils').set_log_level(<f-args>)", { nargs
 
 cmd('GRW', ':Gread | noa W', { nargs = 0 })
 cmd('Sync', ':Lazy sync', { nargs = 0 })
+
+local function rg_in_cwd(cmdtable)
+  local oildir = require('oil').get_current_dir()
+  if not (oildir == nil) then
+    vim.cmd.Rg(cmdtable.fargs[1], oildir)
+  else
+    vim.cmd.Rg(cmdtable.fargs[1], vim.fn.expand '%:h')
+  end
+end
+cmd('Crg', rg_in_cwd, { nargs = 1 })
