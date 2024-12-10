@@ -140,3 +140,8 @@ end
 opt.colorcolumn = '80'
 
 g.python3_host_prog = 'python3.9'
+
+-- OSC-52 does not work with Wezterm over ssh.  Checking for OSC-52 causes a
+-- disruption whenever checking the + or * registers
+g.clipboard = false
+opt.clipboard = 'unnamedplus'
