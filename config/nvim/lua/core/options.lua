@@ -159,3 +159,6 @@ vim.diagnostic.config {
     border = 'rounded',
   },
 }
+g.python3_host_prog = 'python3.9'
+
+opt.clipboard = 'unnamedplus'
