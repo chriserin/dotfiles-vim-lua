@@ -63,7 +63,7 @@ return {
       graphql = graphql_formatters,
       markdown = dprint_or_prettier,
       html = dprint_or_prettier,
-      go = { 'gofmt', 'goimports' },
+      go = { 'gofmt', 'goimports', timeout_ms = 2000 },
       ruby = { 'rubyfmt' },
       sql = { 'pg_format' },
       yaml = dprint_or_prettier,
