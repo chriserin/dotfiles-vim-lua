@@ -50,6 +50,7 @@ M.setup = function()
     'dockerfile-language-server',
     'elm-language-server',
     'eslint-lsp',
+    'fsautocomplete',
     'gopls',
     'go-debug-adapter',
     'goimports',
