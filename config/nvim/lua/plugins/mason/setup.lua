@@ -53,6 +53,7 @@ M.setup = function()
     'dprint',
     'elm-language-server',
     'eslint-lsp',
+    'fsautocomplete',
     'gopls',
     'go-debug-adapter',
     'goimports',
