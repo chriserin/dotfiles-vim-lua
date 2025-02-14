@@ -25,6 +25,7 @@
 "pipx:neovim-remote" = "latest"         # allow controlling neovim remotely
 "pipx:posting" = "latest"               # like postman but a TUI
 "pipx:yq" = "latest"                    # like jq but for yaml files
+"pipx:gigalixir" = "latest"             # like jq but for yaml files
 "ubi:dlvhdr/diffnav" = "latest"         # A git diff pager based on delta but with a file tree, à la GitHub.
 "ubi:joshmedeski/sesh" = "latest"       # tmux session manager
 "ubi:mr-karan/doggo" = "latest"         # DNS client (like dig but better)
