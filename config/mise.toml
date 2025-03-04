@@ -1,0 +1,7 @@
+# This file is meant to have higher precedence and override the
+# ~/.config/mise/config.toml file to enable smoother rebasing
+# of chriserin/dotfiles on top of dkarter/dotfiles
+
+[tools]
+"npm:@anthropic-ai/claude-code" = "latest" # agentic ai cli coding tool
+"pipx:gigalixir" = "latest"                # a tool to manage elixir instances running on the gigalixir platform
