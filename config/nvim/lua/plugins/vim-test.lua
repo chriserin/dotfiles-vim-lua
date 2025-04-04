@@ -6,5 +6,6 @@ return {
   dependencies = { 'preservim/vimux' },
   init = function()
     vim.g['test#strategy'] = 'tslime'
+    vim.g['test#preserve_screen'] = 1
   end,
 }
