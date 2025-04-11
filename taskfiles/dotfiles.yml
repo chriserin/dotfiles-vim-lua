@@ -133,6 +133,7 @@ tasks:
         - zinitrc
         - zshenv
         - zshrc
+        - zshrc.cerin
     cmds:
       - for:
           var: FILES
