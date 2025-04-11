@@ -101,6 +101,9 @@ export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config"
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
+# CERIN config
+[[ -f ~/.zshrc.cerin ]] && source ~/.zshrc.cerin
+
 # add go path bin to path
 export PATH=$PATH:$GOPATH/bin
 
