@@ -1,3 +1,4 @@
 
 # READ man pages using vim
 export MANPAGER='nvim +Man!'
+export PATH=$PATH:~/go/bin
