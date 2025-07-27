@@ -80,7 +80,6 @@ M.setup = function()
     'terraform-ls',
     'typescript-language-server',
     'typos',
-    'typos-lsp',
     'vim-language-server',
     'yaml-language-server',
     'zls',
