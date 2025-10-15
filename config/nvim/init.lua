@@ -62,6 +62,7 @@ local modules = {
   'cerin.commands',
   'cerin.mappings',
   'cerin.autocmds',
+  'cerin.sourcekit-lsp',
 }
 
 for _, module in ipairs(modules) do
