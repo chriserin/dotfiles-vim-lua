@@ -1,0 +1,3 @@
+[alias]
+  # conventional commit log with highlighted types and scopes
+  clog = "!f() { git log --pretty=format:'%C(240)%h%C(reset) %s' --color=always \"$@\" | perl -pe 's/(\\x1b\\[38;5;240m[a-f0-9]+\\x1b\\[m) (feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\\([^)]+\\))?:(.*)$/\\1 \\x1b[1;35m\\2\\x1b[0m\\x1b[36m\\3\\x1b[0m\\x1b[1;33m:\\x1b[0m\\x1b[38;5;208m\\4\\x1b[0m/'; }; f"
