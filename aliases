@@ -290,6 +290,7 @@ alias blog='cd ~/dev/sites/DorianKarter.com/blog'
 alias docs='cd ~/Dropbox/Documents'
 
 alias ss='imgur-screenshot.sh'
+alias glow='git clog'
 
 # debian
 # creates a pbcopy command using xclip
