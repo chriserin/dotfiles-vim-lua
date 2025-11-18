@@ -139,6 +139,7 @@ tasks:
         - ctags
         - gemrc
         - gitconfig
+        - gitconfig.cerin
         - gitignore
         - gitmessage
         - ignore
