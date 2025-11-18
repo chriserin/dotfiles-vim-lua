@@ -148,7 +148,7 @@
 ; Load local configs.
 ; https://git-scm.com/docs/git-config#_includes
 [include]
-  path = ~/.gitconfig.local
+  path = ~/.config/gitconfig.cerin
 [user]
 	name = Chris Erin
 	email = chris.erin@gmail.com
