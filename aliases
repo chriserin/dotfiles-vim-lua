@@ -3,7 +3,6 @@
 # vim: ft=zsh
 
 # remove zinit alias - so I can use zoxide's zi (z interactive)
-unalias zi
 
 # Unix
 # short for ls
