@@ -351,7 +351,6 @@ M.flash_mappings = {
   {"t"},
   {"T"},
   {";"},
-  {","}
 }
 
 ---@type LazyKeysSpec[]
