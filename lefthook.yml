@@ -5,12 +5,6 @@ pre-commit:
     - name: Check Secret Leaks
       run: mise x -- gitleaks git --pre-commit --redact --staged --verbose --no-banner
 
-    - name: Check formatting
-      run: mise x -- task ci:format:check
-
-    - name: Check for typos
-      run: mise x -- task ci:spelling:lint
-
 commit-msg:
   jobs:
     - name: conventional commits
