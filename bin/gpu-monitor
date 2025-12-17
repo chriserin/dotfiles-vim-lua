@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Wrapper for GPU monitoring script
+exec "$HOME/dotfiles/scripts/gpu-monitor.sh" "$@"
