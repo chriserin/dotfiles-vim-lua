@@ -11,6 +11,11 @@ includes:
     dir: ../
     internal: true
 
+  claude:
+    taskfile: ./claude.yml
+    dir: ../
+    internal: true
+
   completions:
     taskfile: ./completions.yml
     internal: true
@@ -73,6 +78,7 @@ tasks:
       - task: shell:zsh:default
       - task: create:dirs
       - task: symlink
+      - task: claude:sync
       - task: mac:set:defaults
       - task: zinit:install
       - task: zinit:plugins:update
@@ -103,6 +109,7 @@ tasks:
       - task: arch:sync
       - task: create:dirs
       - task: symlink
+      - task: claude:sync
       - task: mise:sync
       - task: git:hooks:sync
       - task: brew:sync

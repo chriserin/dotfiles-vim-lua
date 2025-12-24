@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: '3'
+
+tasks:
+  symlink:
+    desc: Symlink Claude Code configuration
+    summary: |
+      Symlink Claude Code configuration files
+
+      Creates symlinks from claude/ to ~/.claude
+    cmds:
+      - cmd: |
+          mkdir -p ~/.claude
+          ln -s -f "$(realpath ./claude/settings.json)" ~/.claude/settings.json
+          mkdir -p ~/.claude/hooks
+          ln -s -f "$(realpath ./claude/hooks/nvim-socket-open.sh)" ~/.claude/hooks/nvim-socket-open.sh
+          chmod +x ~/.claude/hooks/nvim-socket-open.sh
+        silent: true
+
+  sync:
+    desc: Synchronize Claude Code configuration
+    cmds:
+      - task: symlink

@@ -1,0 +1,20 @@
+{
+  "feedbackSurveyState": {
+    "lastShownTime": 1756046807787
+  },
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/nvim-socket-open.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
