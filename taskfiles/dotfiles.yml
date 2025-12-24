@@ -18,6 +18,11 @@ includes:
     dir: ../
     internal: true
 
+  claude:
+    taskfile: ./claude.yml
+    dir: ../
+    internal: true
+
   completions:
     taskfile: ./completions.yml
     internal: true
@@ -98,6 +103,8 @@ tasks:
       - task: agent-guard:install
       - task: inline-command:install
       - task: op:install:ssh:agent
+      - task: claude:sync
+      - task: mac:set:defaults
       - task: zinit:install
       - task: zinit:plugins:update
       - task: mac:set:defaults
@@ -152,6 +159,7 @@ tasks:
       - task: arch:sync
       - task: create:dirs
       - task: symlink
+      - task: claude:sync
       - task: mise:sync:prepare
       - task: pitchfork:sync
       - task: agent-guard:install
