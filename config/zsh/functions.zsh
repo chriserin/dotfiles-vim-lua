@@ -309,3 +309,15 @@ up() {
   while ((n--)); do p+="../"; done
   cd $p
 }
+
+# open nvim with server id matching current tmux session
+# allows multiple nvim instances with unique server names per tmux session
+nv() {
+  local session_name=$(tmux display-message -p '#S' 2>/dev/null)
+  if [ -z "$session_name" ]; then
+    # not in tmux, just open nvim normally
+    nvim "$@"
+  else
+    nvim --listen "/tmp/nvim-${session_name}.sock" "$@"
+  fi
+}
