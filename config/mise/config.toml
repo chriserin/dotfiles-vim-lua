@@ -32,6 +32,7 @@
 "cargo:wireman" = "latest"                                                              # GRPC TUI client
 "gem:tmuxinator" = "latest"                                                             # tmux session manager
 "github:chriserin/tama" = "latest"
+"github:chriserin/shy" = "latest"
 "npm:@anthropic-ai/claude-code" = "latest"                                              # AI agent
 "npm:@commitlint/cli" = "latest"                                                        # linter for checking that commits are following conventional commits
 "npm:neovim" = "latest"                                                                 # support for javascript plugins in neovim

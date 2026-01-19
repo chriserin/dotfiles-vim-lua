@@ -1,0 +1,12 @@
+[metadata]
+name = "shy-history"
+description = "Browse shell command history from shy database"
+requirements = ["shy"]
+
+[source]
+command = "/usr/local/bin/shy tv list"
+display = "{split:\t:1}"
+output = "{split:\t:0}"
+
+[preview]
+command = "/usr/local/bin/shy tv preview '{split:\t:0}'"
