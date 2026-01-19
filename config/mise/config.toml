@@ -35,6 +35,7 @@
 "github:ast-grep/ast-grep" = "latest"                                                      # a cli tool for searching and rewriting code using AST
 "github:babs/multiping" = "latest"
 "github:chmln/sd" = "latest"                                                               # a modern alternative for sed with sensible defaults
+"github:chriserin/tama" = "latest"
 "github:dkarter/lnr" = "latest"                                                            # linear cli
 "github:dlvhdr/diffnav" = "latest"                                                         # A git diff pager based on delta but with a file tree, à la GitHub.
 "github:ip7z/7zip" = { version = "latest", exe = "7zz" }                                   # 7zip cli
