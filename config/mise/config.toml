@@ -35,6 +35,7 @@
 "github:babs/multiping" = "latest"                                                         # pings multiple hosts at once
 "github:chmln/sd" = "latest"                                                               # a modern alternative for sed with sensible defaults
 "github:chriserin/tama" = "latest"
+"github:chriserin/shy" = "latest"
 "github:dkarter/lnr" = "latest"                                                            # linear cli
 "github:dkarter/pdf-redact" = "latest"                                                     # pdf mass redaction tool
 "github:dlvhdr/diffnav" = "latest"                                                         # A git diff pager based on delta but with a file tree, à la GitHub.

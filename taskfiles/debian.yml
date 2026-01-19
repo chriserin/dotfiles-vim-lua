@@ -58,6 +58,7 @@ vars:
     - ruby
     - rustc
     - squashfs-tools
+    - sqlite3
     - ssh-askpass
     - tk-dev
     - tmux
