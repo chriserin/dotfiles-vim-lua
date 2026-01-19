@@ -116,6 +116,8 @@ zoxide = "latest"                            # a modern version of autojump
 ] }
 "npm:chrome-devtools-mcp" = "latest"
 "github:chriserin/tama" = "latest"
+"github:chriserin/shy" = "latest"
+
 
 [tools.amp]
 version = "latest"

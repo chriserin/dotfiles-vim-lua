@@ -61,6 +61,7 @@ vars:
     - pkg-config
     - postgresql-client
     - squashfs-tools
+    - sqlite3
     - ssh-askpass
     - tk-dev
     - unixodbc-dev
