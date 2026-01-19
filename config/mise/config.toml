@@ -115,6 +115,7 @@ zoxide = "latest"                            # a modern version of autojump
   "playwright-core@1.63.0-alpha-2026-08-31",
 ] }
 "npm:chrome-devtools-mcp" = "latest"
+"github:chriserin/tama" = "latest"
 
 [tools.amp]
 version = "latest"
