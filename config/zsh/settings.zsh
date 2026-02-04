@@ -45,6 +45,6 @@ export LESS_TERMCAP_us=$(printf '\e[04;36m') # enter underline mode – cyan
 # spellchecker:on
 
 ## CERIN
-# Replace zsh history tracking with `shy``
+# Replace zsh history tracking with `shy`
 export HISTSIZE=0
 export SAVEHIST=0
