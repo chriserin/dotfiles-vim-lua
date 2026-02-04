@@ -46,6 +46,7 @@ tasks:
         - 'pitchfork|pitchfork completion zsh'
         - 'rg|rg --generate=complete-zsh'
         - 'sesh|sesh completion zsh'
+        - 'shy|shy completion zsh'
         - 'stack|stack --completions zsh'
         - 'starship|starship completions zsh'
         - 'task|task --completion zsh'
