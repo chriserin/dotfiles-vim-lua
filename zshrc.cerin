@@ -1,3 +1,3 @@
 
-# READ man pages using vim
-export MANPAGER='nvim +Man!'
+eval "$(shy init zsh)"
+export ZSH_AUTOSUGGEST_STRATEGY=(shy_history)
