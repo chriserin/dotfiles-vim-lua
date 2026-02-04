@@ -1,2 +1,3 @@
 
 eval "$(shy init zsh)"
+export ZSH_AUTOSUGGEST_STRATEGY=(shy_history)
