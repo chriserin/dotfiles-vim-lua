@@ -34,6 +34,7 @@ tasks:
         - 'pgroll|pgroll completion zsh'
         - 'rg|rg --generate=complete-zsh'
         - 'sesh|sesh completion zsh'
+        - 'shy|shy completion zsh'
         - 'starship|starship completions zsh'
         - 'talosctl|talosctl completion zsh'
         - 'task|task --completion zsh'
