@@ -1,3 +1,7 @@
 
+
+## Integrate with zsh
 eval "$(shy init zsh)"
+
+## Integrate with zsh_autosuggest
 export ZSH_AUTOSUGGEST_STRATEGY=(shy_history)

@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+#
+# Display the 16 ANSI terminal colors with labels and hex values.
+# Queries the running terminal for actual color values using OSC 4.
+#
+
+set -euo pipefail
+
+labels=(
+  "Black" "Red" "Green" "Yellow"
+  "Blue" "Magenta" "Cyan" "White"
+  "Bright Black" "Bright Red" "Bright Green" "Bright Yellow"
+  "Bright Blue" "Bright Magenta" "Bright Cyan" "Bright White"
+)
+
+# Save terminal settings and ensure they are restored on exit
+old_stty=$(stty -g </dev/tty)
+trap 'stty "$old_stty" </dev/tty 2>/dev/null' EXIT
+
+# Query a single color index via OSC 4 and print its hex value.
+# Terminal responds with: ESC ] 4 ; <n> ; rgb:RRRR/GGGG/BBBB BEL
+query_color() {
+  local idx=$1
+
+  stty raw -echo min 0 time 1 </dev/tty
+  printf '\e]4;%d;?\a' "$idx" >/dev/tty
+
+  local response="" char
+  while IFS= read -rs -n1 -t 0.2 char </dev/tty; do
+    response+="$char"
+    [[ "$char" == $'\a' ]] && break
+  done
+  stty "$old_stty" </dev/tty
+
+  if [[ "$response" =~ rgb:([0-9a-fA-F]{2,4})/([0-9a-fA-F]{2,4})/([0-9a-fA-F]{2,4}) ]]; then
+    printf '#%s%s%s' "${BASH_REMATCH[1]:0:2}" "${BASH_REMATCH[2]:0:2}" "${BASH_REMATCH[3]:0:2}"
+  else
+    printf 'N/A'
+  fi
+}
+
+echo "ANSI Color Palette"
+echo "══════════════════════════════════════"
+echo
+
+for i in {0..15}; do
+  hex=$(query_color "$i")
+  printf '\e[48;5;%dm    \e[0m  %2d  %-16s %s\n' "$i" "$i" "${labels[$i]}" "$hex"
+  [[ $i -eq 7 ]] && echo
+done
+
+echo
