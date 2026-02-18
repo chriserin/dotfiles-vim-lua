@@ -16,6 +16,7 @@ local parsers = {
   'elixir',
   'elm',
   'erlang',
+  'gherkin',
   'git_config',
   'git_rebase',
   'gitcommit',
@@ -76,6 +77,15 @@ return {
     dependencies = {},
     opts = {
       install_dir = vim.fn.stdpath 'data' .. '/site',
+      -- Install parsers synchronously (only applied to `ensure_installed`)
+      sync_install = false,
+
+      -- Automatically install missing parsers when entering buffer
+      -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+      auto_install = true,
+
+      -- List of parsers to ignore installing
+      ignore_install = { 'tmux' },
     },
     init = function()
       require('vim.treesitter.query').add_predicate('is-mise?', function(_, _, bufnr, _)
@@ -90,6 +100,17 @@ return {
       if vim.fn.executable 'tree-sitter' == 1 then
         ts.install(parsers)
       end
+      local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
+      parser_config.gherkin = {
+        install_info = {
+          url = 'https://github.com/chriserin/tree-sitter-gherkin',
+          files = { 'src/parser.c', 'src/scanner.c' },
+          branch = 'main',
+        },
+        filetype = 'gherkin',
+      }
+
+      require('nvim-treesitter.configs').setup(opts)
 
       local augroup = require('core.utils').augroup
 
