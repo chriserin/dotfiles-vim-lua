@@ -74,6 +74,7 @@ return {
       -- at PDQ is slow AF - can disable it momentarily and see if this improves
       elixir = { 'mix', timeout_ms = 2000 },
       sh = { 'shfmt' },
+      gherkin = { 'gherkin_format' },
       zsh = { 'dprint', 'shfmt', stop_after_first = true },
       terraform = { 'terraform_fmt' },
       toml = { 'dprint', 'taplo', stop_after_first = true },
@@ -113,6 +114,31 @@ return {
   },
   config = function(_self, opts)
     local conform = require 'conform'
+
+    conform.formatters.gherkin_format = {
+      inherit = false,
+      format = function(self, ctx, lines, callback)
+        local formatted, err = require('gherkin_formatter').format(ctx.buf, lines)
+        -- Temporarily disable treesitter folds before conform replaces buffer
+        -- lines. The fold module's async update would otherwise reference stale
+        -- line numbers when the line count changes ("invalid bot").
+        local saved = {}
+        for _, win in ipairs(vim.fn.win_findbuf(ctx.buf)) do
+          if vim.wo[win].foldmethod == 'expr' then
+            vim.wo[win].foldmethod = 'manual'
+            saved[win] = true
+          end
+        end
+        callback(err, formatted)
+        for win in pairs(saved) do
+          vim.schedule(function()
+            if vim.api.nvim_win_is_valid(win) then
+              vim.wo[win].foldmethod = 'expr'
+            end
+          end)
+        end
+      end,
+    }
 
     conform.setup(opts)
 
