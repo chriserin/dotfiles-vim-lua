@@ -43,6 +43,7 @@ return {
         'git_rebase',
         'gitcommit',
         'gitignore',
+        'gherkin',
         'gleam',
         'go',
         'graphql',
@@ -110,6 +111,16 @@ return {
       end, { force = true, all = false })
     end,
     config = function(_, opts)
+      local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
+      parser_config.gherkin = {
+        install_info = {
+          url = 'https://github.com/chriserin/tree-sitter-gherkin',
+          files = { 'src/parser.c', 'src/scanner.c' },
+          branch = 'main',
+        },
+        filetype = 'gherkin',
+      }
+
       require('nvim-treesitter.configs').setup(opts)
 
       local augroup = require('core.utils').augroup

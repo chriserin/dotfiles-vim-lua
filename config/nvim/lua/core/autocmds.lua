@@ -158,6 +158,33 @@ augroup('GlobalGX', {
   },
 })
 
+-- Custom highlight groups for gherkin Given/When/Then keywords
+-- Applied on colorscheme change so they don't get overwritten
+local function derive_hl(source, overrides)
+  local hl = vim.api.nvim_get_hl(0, { name = source, link = false })
+  return vim.tbl_extend('force', hl, overrides)
+end
+
+local function set_gherkin_highlights()
+  vim.api.nvim_set_hl(0, '@keyword.gherkin', { fg = '#2974e1', bold = true })
+  local step_source = '@function'
+  vim.api.nvim_set_hl(0, '@keyword.given.gherkin', derive_hl(step_source, { bold = true }))
+  vim.api.nvim_set_hl(0, '@keyword.given.continuation.gherkin', derive_hl(step_source, { bold = false }))
+  vim.api.nvim_set_hl(0, '@keyword.when.gherkin', derive_hl(step_source, { bold = true }))
+  vim.api.nvim_set_hl(0, '@keyword.when.continuation.gherkin', derive_hl(step_source, { bold = false }))
+  vim.api.nvim_set_hl(0, '@keyword.then.gherkin', derive_hl(step_source, { bold = true }))
+  vim.api.nvim_set_hl(0, '@keyword.then.continuation.gherkin', derive_hl(step_source, { bold = false }))
+end
+set_gherkin_highlights()
+
+augroup('GherkinHighlights', {
+  {
+    event = { 'ColorScheme' },
+    pattern = { '*' },
+    command = set_gherkin_highlights,
+  },
+})
+
 augroup('HighlightOnYank', {
   {
     event = { 'TextYankPost' },
