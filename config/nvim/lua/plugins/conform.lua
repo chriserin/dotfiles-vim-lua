@@ -75,6 +75,7 @@ return {
       elixir = { 'mix', timeout_ms = 2000 },
       sh = { 'shfmt' },
       gherkin = { 'gherkin_format' },
+      ft = { 'gherkin_format' },
       zsh = { 'dprint', 'shfmt', stop_after_first = true },
       terraform = { 'terraform_fmt' },
       toml = { 'dprint', 'taplo', stop_after_first = true },
