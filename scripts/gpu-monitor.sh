@@ -145,24 +145,24 @@ INTERVAL=1
 
 while [[ $# -gt 0 ]]; do
   case $1 in
-  -i | --interval)
-    INTERVAL="$2"
-    shift 2
-    ;;
-  -h | --help)
-    echo "Usage: $0 [-i|--interval SECONDS]"
-    echo ""
-    echo "Real-time AMD GPU monitoring"
-    echo ""
-    echo "Options:"
-    echo "  -i, --interval SECONDS    Update interval (default: 1)"
-    echo "  -h, --help               Show this help"
-    exit 0
-    ;;
-  *)
-    echo "Unknown option: $1"
-    exit 1
-    ;;
+    -i | --interval)
+      INTERVAL="$2"
+      shift 2
+      ;;
+    -h | --help)
+      echo "Usage: $0 [-i|--interval SECONDS]"
+      echo ""
+      echo "Real-time AMD GPU monitoring"
+      echo ""
+      echo "Options:"
+      echo "  -i, --interval SECONDS    Update interval (default: 1)"
+      echo "  -h, --help               Show this help"
+      exit 0
+      ;;
+    *)
+      echo "Unknown option: $1"
+      exit 1
+      ;;
   esac
 done
 

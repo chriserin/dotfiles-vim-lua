@@ -123,7 +123,7 @@ return {
         end,
       },
       shfmt = {
-        prepend_args = { '-i', '2' },
+        prepend_args = { '-i', '2', '-ci' },
       },
       mix = {
         -- NOTE: conform was running mix format from the current directory of
