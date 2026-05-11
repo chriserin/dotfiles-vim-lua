@@ -97,10 +97,7 @@ return {
     config = function(_, opts)
       local ts = require 'nvim-treesitter'
       ts.setup(opts)
-      if vim.fn.executable 'tree-sitter' == 1 then
-        ts.install(parsers)
-      end
-      local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
+      local parser_config = require 'nvim-treesitter.parsers'
       parser_config.gherkin = {
         install_info = {
           url = 'https://github.com/chriserin/tree-sitter-gherkin',
@@ -109,8 +106,7 @@ return {
         },
         filetype = 'gherkin',
       }
-
-      require('nvim-treesitter.configs').setup(opts)
+      ts.install(parsers)
 
       local augroup = require('core.utils').augroup
 
