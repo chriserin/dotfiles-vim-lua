@@ -55,15 +55,23 @@ monitor_gpu() {
     local temp1=$(($(cat "$GPU_HWMON/temp1_input") / 1000))
     local temp2=$(($(cat "$GPU_HWMON/temp2_input") / 1000))
     local temp3=$(($(cat "$GPU_HWMON/temp3_input") / 1000))
-    local gpu_util=$(cat "$GPU_DEVICE/gpu_busy_percent")
-    local mem_util=$(cat "$GPU_DEVICE/mem_busy_percent")
+    local gpu_util
+    gpu_util=$(cat "$GPU_DEVICE/gpu_busy_percent")
+    local mem_util
+    mem_util=$(cat "$GPU_DEVICE/mem_busy_percent")
     local power=$(($(cat "$GPU_HWMON/power1_average") / 1000000))
     local power_cap=$(($(cat "$GPU_HWMON/power1_cap") / 1000000))
-    local fan_speed=$(cat "$GPU_HWMON/fan1_input")
-    local sclk=$(grep '\*' "$GPU_DEVICE/pp_dpm_sclk" | awk '{print $2}' | sed 's/Mhz//')
-    local mclk=$(grep '\*' "$GPU_DEVICE/pp_dpm_mclk" | awk '{print $2}' | sed 's/Mhz//')
-    local vram_total=$(cat "$GPU_DEVICE/mem_info_vram_total")
-    local vram_used=$(cat "$GPU_DEVICE/mem_info_vram_used")
+    local fan_speed
+    fan_speed=$(cat "$GPU_HWMON/fan1_input")
+    local sclk
+    sclk=$(grep '\*' "$GPU_DEVICE/pp_dpm_sclk" | awk '{print $2}' | sed 's/Mhz//')
+    local mclk
+    mclk=$(grep '\*' "$GPU_DEVICE/pp_dpm_mclk" | awk '{print $2}' | sed 's/Mhz//')
+
+    local vram_total
+    vram_total=$(cat "$GPU_DEVICE/mem_info_vram_total")
+    local vram_used
+    vram_used=$(cat "$GPU_DEVICE/mem_info_vram_used")
     local vram_mb_used=$((vram_used / 1024 / 1024))
     local vram_mb_total=$((vram_total / 1024 / 1024))
     local vram_percent=$((vram_used * 100 / vram_total))
@@ -137,24 +145,24 @@ INTERVAL=1
 
 while [[ $# -gt 0 ]]; do
   case $1 in
-    -i | --interval)
-      INTERVAL="$2"
-      shift 2
-      ;;
-    -h | --help)
-      echo "Usage: $0 [-i|--interval SECONDS]"
-      echo ""
-      echo "Real-time AMD GPU monitoring"
-      echo ""
-      echo "Options:"
-      echo "  -i, --interval SECONDS    Update interval (default: 1)"
-      echo "  -h, --help               Show this help"
-      exit 0
-      ;;
-    *)
-      echo "Unknown option: $1"
-      exit 1
-      ;;
+  -i | --interval)
+    INTERVAL="$2"
+    shift 2
+    ;;
+  -h | --help)
+    echo "Usage: $0 [-i|--interval SECONDS]"
+    echo ""
+    echo "Real-time AMD GPU monitoring"
+    echo ""
+    echo "Options:"
+    echo "  -i, --interval SECONDS    Update interval (default: 1)"
+    echo "  -h, --help               Show this help"
+    exit 0
+    ;;
+  *)
+    echo "Unknown option: $1"
+    exit 1
+    ;;
   esac
 done
 
