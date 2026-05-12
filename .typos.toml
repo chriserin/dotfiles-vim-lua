@@ -20,3 +20,6 @@ extend-exclude = [
   "CHANGELOG.md",
   "package-lock.json",
 ]
+
+[default.extend-identifiers]
+HSA_OVERRIDE_GFX_VERSION = "HSA_OVERRIDE_GFX_VERSION"
