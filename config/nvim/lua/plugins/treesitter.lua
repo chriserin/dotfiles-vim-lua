@@ -1,3 +1,18 @@
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'TSUpdate',
+  callback = function()
+    require('nvim-treesitter.parsers').gherkin = {
+      install_info = {
+        url = 'https://github.com/chriserin/tree-sitter-gherkin',
+        files = { 'src/parser.c', 'src/scanner.c' },
+        branch = 'main',
+        revision = '5b705df49ab398f0b7d5a7a82f0a17f4ab84c111',
+      },
+      filetype = 'gherkin',
+      tier = 2,
+    }
+  end,
+})
 --  Better syntax highlighting (and more)
 ---@type string[]
 local parsers = {
@@ -97,15 +112,6 @@ return {
     config = function(_, opts)
       local ts = require 'nvim-treesitter'
       ts.setup(opts)
-      local parser_config = require 'nvim-treesitter.parsers'
-      parser_config.gherkin = {
-        install_info = {
-          url = 'https://github.com/chriserin/tree-sitter-gherkin',
-          files = { 'src/parser.c', 'src/scanner.c' },
-          branch = 'main',
-        },
-        filetype = 'gherkin',
-      }
       ts.install(parsers)
 
       local augroup = require('core.utils').augroup

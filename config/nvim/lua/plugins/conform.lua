@@ -95,6 +95,7 @@ return {
       zsh = { 'dprint', 'shfmt', stop_after_first = true },
       terraform = { 'terraform_fmt' },
       toml = { 'dprint', 'taplo', stop_after_first = true },
+      ft = { 'gherkin_format' },
     },
     -- Set default options
     default_format_opts = {
