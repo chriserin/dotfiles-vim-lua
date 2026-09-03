@@ -44,7 +44,7 @@ local packages = {
   -- python linting/formatting
   'ruff',
   'shellcheck',
-  'sqlls',
+  --'sqlls',
   'tailwindcss-language-server',
   'taplo',
   'terraform-ls',

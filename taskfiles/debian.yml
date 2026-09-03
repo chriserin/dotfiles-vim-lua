@@ -60,6 +60,7 @@ vars:
     - patch
     - pkg-config
     - postgresql-client
+    - pgformatter
     - squashfs-tools
     - sqlite3
     - ssh-askpass
