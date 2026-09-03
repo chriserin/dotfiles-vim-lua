@@ -313,6 +313,8 @@ nv() {
     # not in tmux, just open nvim normally
     nvim "$@"
   else
-    nvim --listen "/tmp/nvim-${session_name}.sock" "$@"
+    local sock="/tmp/nvim-${session_name}.sock"
+    tmux set-environment NVIM "$sock"
+    nvim --listen "$sock" "$@"
   fi
 }
