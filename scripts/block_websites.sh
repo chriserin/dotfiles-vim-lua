@@ -19,9 +19,12 @@ _website_block_domains=(
   www.dailyecho.co.uk
   redlegnation.com
   www.redlegnation.com
+  redsminorleagues.com
+  www.redsminorleagues.com
   theguardian.com
   www.theguardian.com
   bsky.app
+  southamptonfc.com
 )
 
 _website_block_hosts_file="/etc/hosts"
@@ -50,7 +53,8 @@ unblock_websites() (
     echo "Nothing to unblock."
     return 0
   fi
-  sudo sed -i "/$_website_block_mark_begin/,/$_website_block_mark_end/d" "$_website_block_hosts_file"
+  sudo sed -i.bak "/$_website_block_mark_begin/,/$_website_block_mark_end/d" "$_website_block_hosts_file"
+  sudo rm -f "${_website_block_hosts_file}.bak"
   echo "Unblocked."
 )
 
