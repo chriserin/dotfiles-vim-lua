@@ -2,7 +2,6 @@
 
 "github:crate-ci/committed" = "latest"
 "github:mazznoer/lolcrab" = "latest"
-aube = "latest"
 bun = "latest"
 dprint = "latest"
 gitleaks = "latest"
