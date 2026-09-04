@@ -12,7 +12,8 @@ tasks:
         './mise.lock' \
         './config/mise/mise.lock' \
         './config/mise/mise.extra.lock' \
-        './config/mise/mise.pdq.lock'
+        './config/mise/mise.pdq.lock' \
+        './config/mise/mise.cerin.lock'
 
       if [[ -z "$(git status --porcelain -- "$@")" ]]; then
         echo "No changes in mise lockfiles"
@@ -35,6 +36,7 @@ tasks:
       - cmd: MISE_ENV= mise lock -g
       - cmd: MISE_ENV=extra mise lock -g
       - cmd: MISE_ENV=pdq mise lock -g
+      - cmd: MISE_ENV=cerin mise lock -g
 
   sync:
     desc: Updates mise tools (runtimes), mise itself and installs packages for this project
