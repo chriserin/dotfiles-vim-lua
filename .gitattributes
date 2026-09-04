@@ -1,4 +1,3 @@
 mise.lock merge=mise-lock
 config/mise/mise.lock merge=mise-lock
 config/mise/mise.extra.lock merge=mise-lock
-claude/settings.json filter=claude-settings

@@ -2,22 +2,23 @@
 version: '3'
 
 tasks:
-  symlink:
-    desc: Symlink Claude Code configuration
+  install:
+    desc: Install Claude Code configuration
     summary: |
-      Symlink Claude Code configuration files
+      Symlinks config/claude/hooks/nvim-socket-open.sh into ~/.claude/hooks,
+      and merges config/claude/settings.json's hooks into
+      ~/.claude/settings.json.
 
-      Creates symlinks from claude/ to ~/.claude
+      ~/.claude/settings.json can't be a straight symlink to the repo: it's
+      a real file other installers (config/agent-guard/install.sh) and
+      Claude Code itself write personal/local fields into.
+      config/claude/install.sh merges this tool's hooks in without
+      disturbing that other content, the same way
+      config/agent-guard/install.sh merges its own hook in.
     cmds:
-      - cmd: |
-          mkdir -p ~/.claude
-          ln -s -f "$(realpath ./claude/settings.json)" ~/.claude/settings.json
-          mkdir -p ~/.claude/hooks
-          ln -s -f "$(realpath ./claude/hooks/nvim-socket-open.sh)" ~/.claude/hooks/nvim-socket-open.sh
-          chmod +x ~/.claude/hooks/nvim-socket-open.sh
-        silent: true
+      - ./config/claude/install.sh
 
   sync:
     desc: Synchronize Claude Code configuration
     cmds:
-      - task: symlink
+      - task: install
