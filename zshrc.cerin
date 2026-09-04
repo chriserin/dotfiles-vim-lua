@@ -1,9 +1,7 @@
-
-
 ## Integrate with zsh
-eval "$(shy init zsh)"
+eval "$(mise exec github:chriserin/shy@latest -- shy init zsh)"
 
 ## Integrate with zsh_autosuggest
-export ZSH_AUTOSUGGEST_STRATEGY=(shy_history)
+(( $+functions[_zsh_autosuggest_strategy_shy_history] )) && export ZSH_AUTOSUGGEST_STRATEGY=(shy_history)
 
 [[ -f ~/dotfiles/scripts/block_websites.sh ]] && source ~/dotfiles/scripts/block_websites.sh
