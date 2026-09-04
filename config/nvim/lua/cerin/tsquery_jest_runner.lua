@@ -26,7 +26,7 @@ local describe_it_query = [[
 --
 local function get_parser_language()
   local bnr = vim.api.nvim_get_current_buf()
-  local ft = vim.api.nvim_buf_get_option(bnr, 'filetype')
+  local ft = vim.bo[bnr].filetype
   return require('nvim-treesitter.parsers').ft_to_lang(ft)
 end
 
@@ -35,7 +35,14 @@ function M.get_tests()
   local parser_language = get_parser_language()
   local t = require 'vim.treesitter'
   local language_tree = vim.treesitter.get_parser(bnr, parser_language)
+  if language_tree == nil then
+    return
+  end
+
   local syntax_tree = language_tree:parse()
+  if syntax_tree == nil then
+    return
+  end
 
   local root = syntax_tree[1]:root()
 
@@ -86,7 +93,7 @@ end
 
 function M.find_test_string()
   local tests = M.get_tests()
-  if #tests == 0 then
+  if tests == nil or #tests == 0 then
     return 'no-tests'
   end
 
