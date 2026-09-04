@@ -16,7 +16,7 @@ tasks:
       disturbing that other content, the same way
       config/agent-guard/install.sh merges its own hook in.
     cmds:
-      - ./config/claude/install.sh
+      - ./claude/install.sh
 
   sync:
     desc: Synchronize Claude Code configuration
