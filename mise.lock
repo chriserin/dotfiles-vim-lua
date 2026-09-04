@@ -270,63 +270,63 @@ url = "https://github.com/mazznoer/lolcrab/releases/download/v0.4.1/lolcrab-x86_
 url_api = "https://api.github.com/repos/mazznoer/lolcrab/releases/assets/249376744"
 
 [[tools."github:nubjs/nub"]]
-version = "0.8.2"
+version = "0.8.3"
 backend = "github:nubjs/nub"
 
 [tools."github:nubjs/nub"."platforms.linux-arm64"]
-checksum = "sha256:6d74e5e52b204bf6c040d2778e8b39f27d1b38931c8a0ea23778bbf9b11432b6"
-url = "https://github.com/nubjs/nub/releases/download/v0.8.2/nub-linux-arm64.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/539121132"
+checksum = "sha256:060a31aeab3024f6db54fee74db2a1552759a8fee98e1b3dd6924977f9732bca"
+url = "https://github.com/nubjs/nub/releases/download/v0.8.3/nub-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/542043158"
 
 [tools."github:nubjs/nub"."platforms.linux-arm64-musl"]
-checksum = "sha256:3e9d88ec1098a6ffcb6f149e516f7be66ebf5f40f2928be7d6db109c6b14a1cd"
-url = "https://github.com/nubjs/nub/releases/download/v0.8.2/nub-linux-arm64-musl.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/539121172"
+checksum = "sha256:81f43a48852ee479809de4e4f54f3f913a016178c4f3a86f06eef8c593b9b7d7"
+url = "https://github.com/nubjs/nub/releases/download/v0.8.3/nub-linux-arm64-musl.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/542043203"
 
 [tools."github:nubjs/nub"."platforms.linux-x64"]
-checksum = "sha256:17b7693411f72fe4f1c2ab1c06727c2aa98b5a5441abba60ca0fe4ccb6331328"
-url = "https://github.com/nubjs/nub/releases/download/v0.8.2/nub-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/539121027"
+checksum = "sha256:249b064916db290c53de5bc1721a1dd78cf82e0f951f320782598b477cad7af9"
+url = "https://github.com/nubjs/nub/releases/download/v0.8.3/nub-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/542043105"
 
 [tools."github:nubjs/nub"."platforms.linux-x64-baseline"]
-checksum = "sha256:17b7693411f72fe4f1c2ab1c06727c2aa98b5a5441abba60ca0fe4ccb6331328"
-url = "https://github.com/nubjs/nub/releases/download/v0.8.2/nub-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/539121027"
+checksum = "sha256:249b064916db290c53de5bc1721a1dd78cf82e0f951f320782598b477cad7af9"
+url = "https://github.com/nubjs/nub/releases/download/v0.8.3/nub-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/542043105"
 
 [tools."github:nubjs/nub"."platforms.linux-x64-musl"]
-checksum = "sha256:3061ee30b6774f7f1a5d83bdf0de8c12cb650b1ca6f674708bec561e2062cf52"
-url = "https://github.com/nubjs/nub/releases/download/v0.8.2/nub-linux-x64-musl.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/539121082"
+checksum = "sha256:c7a71b1abe9128b3984b8056330c86158578c212697c8f5b14dcd1199487d201"
+url = "https://github.com/nubjs/nub/releases/download/v0.8.3/nub-linux-x64-musl.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/542043133"
 
 [tools."github:nubjs/nub"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:3061ee30b6774f7f1a5d83bdf0de8c12cb650b1ca6f674708bec561e2062cf52"
-url = "https://github.com/nubjs/nub/releases/download/v0.8.2/nub-linux-x64-musl.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/539121082"
+checksum = "sha256:c7a71b1abe9128b3984b8056330c86158578c212697c8f5b14dcd1199487d201"
+url = "https://github.com/nubjs/nub/releases/download/v0.8.3/nub-linux-x64-musl.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/542043133"
 
 [tools."github:nubjs/nub"."platforms.macos-arm64"]
-checksum = "sha256:612914a03b2c7fd62e3e77c76ab86becc3f261de81cad3fa0dc0112197d65184"
-url = "https://github.com/nubjs/nub/releases/download/v0.8.2/nub-darwin-arm64.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/539120935"
+checksum = "sha256:9d27ebec48e3d90e86ea35c088ddaf2f87b8b466e047722cb9c96e333e5a5252"
+url = "https://github.com/nubjs/nub/releases/download/v0.8.3/nub-darwin-arm64.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/542043029"
 
 [tools."github:nubjs/nub"."platforms.macos-x64"]
-checksum = "sha256:db2ff052194a2609705e755519cb107247e96202987f40989d299097cf4d2812"
-url = "https://github.com/nubjs/nub/releases/download/v0.8.2/nub-darwin-x64.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/539120981"
+checksum = "sha256:e92b589d7c39e954a83697f68b5a677cfd4e7f664112163c73d081369019d430"
+url = "https://github.com/nubjs/nub/releases/download/v0.8.3/nub-darwin-x64.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/542043067"
 
 [tools."github:nubjs/nub"."platforms.macos-x64-baseline"]
-checksum = "sha256:db2ff052194a2609705e755519cb107247e96202987f40989d299097cf4d2812"
-url = "https://github.com/nubjs/nub/releases/download/v0.8.2/nub-darwin-x64.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/539120981"
+checksum = "sha256:e92b589d7c39e954a83697f68b5a677cfd4e7f664112163c73d081369019d430"
+url = "https://github.com/nubjs/nub/releases/download/v0.8.3/nub-darwin-x64.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/542043067"
 
 [tools."github:nubjs/nub"."platforms.windows-x64"]
-checksum = "sha256:52dfe1ba7bb841c83793ec622e5d6d8de8abd2b027c37df700487fc28cfe16ba"
-url = "https://github.com/nubjs/nub/releases/download/v0.8.2/nub-win32-x64.zip"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/539121212"
+checksum = "sha256:61196d3d5c8b75f351656069d36a29f3751ceafaa20320394514246d72d578e9"
+url = "https://github.com/nubjs/nub/releases/download/v0.8.3/nub-win32-x64.zip"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/542043224"
 
 [tools."github:nubjs/nub"."platforms.windows-x64-baseline"]
-checksum = "sha256:52dfe1ba7bb841c83793ec622e5d6d8de8abd2b027c37df700487fc28cfe16ba"
-url = "https://github.com/nubjs/nub/releases/download/v0.8.2/nub-win32-x64.zip"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/539121212"
+checksum = "sha256:61196d3d5c8b75f351656069d36a29f3751ceafaa20320394514246d72d578e9"
+url = "https://github.com/nubjs/nub/releases/download/v0.8.3/nub-win32-x64.zip"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/542043224"
 
 [[tools.gitleaks]]
 version = "8.30.1"
