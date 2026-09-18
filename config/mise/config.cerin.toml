@@ -3,3 +3,7 @@
 "github:chriserin/tama" = "latest"
 "github:chriserin/shy" = "latest"
 "github:chriserin/tour" = "latest"
+"github:chriserin/dev" = "latest"
+
+[settings]
+minimum_release_age_excludes = ["github:chriserin/dev", "github:chriserin/ft"]
