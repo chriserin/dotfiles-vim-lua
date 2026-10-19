@@ -35,6 +35,11 @@ augroup('SetSpell', {
     pattern = { 'gitcommit' },
     command = 'setlocal spell',
   },
+  {
+    event = { 'FileType' },
+    pattern = { 'swift' },
+    command = 'setlocal nospell',
+  },
 })
 
 augroup('Firenvim', {
