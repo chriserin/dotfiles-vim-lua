@@ -39,45 +39,6 @@ checksum = "sha256:9e26558d7371237eba7498c88028fe42989097aa4c297edad8bed5816ce06
 url = "https://github.com/chriserin/dev/releases/download/0.1.1/dev-0.1.1-windows-amd64.zip"
 url_api = "https://api.github.com/repos/chriserin/dev/releases/assets/544860073"
 
-[[tools."github:chriserin/ft"]]
-version = "0.1.2"
-backend = "github:chriserin/ft"
-
-[tools."github:chriserin/ft"."platforms.linux-arm64"]
-checksum = "sha256:33b0167bdfde4990847dada6866e682bba448072051301af2b596fe0cfce4fbe"
-url = "https://github.com/chriserin/ft/releases/download/0.1.2/ft-0.1.2-linux-arm64.tar.gz"
-url_api = "https://api.github.com/repos/chriserin/ft/releases/assets/523956340"
-
-[tools."github:chriserin/ft"."platforms.linux-arm64-musl"]
-checksum = "sha256:33b0167bdfde4990847dada6866e682bba448072051301af2b596fe0cfce4fbe"
-url = "https://github.com/chriserin/ft/releases/download/0.1.2/ft-0.1.2-linux-arm64.tar.gz"
-url_api = "https://api.github.com/repos/chriserin/ft/releases/assets/523956340"
-
-[tools."github:chriserin/ft"."platforms.linux-x64"]
-checksum = "sha256:7194849d0b20a8dee67a36c700cda616a02285070003bd8bf336a3146c1a8a22"
-url = "https://github.com/chriserin/ft/releases/download/0.1.2/ft-0.1.2-linux-amd64.tar.gz"
-url_api = "https://api.github.com/repos/chriserin/ft/releases/assets/523956343"
-
-[tools."github:chriserin/ft"."platforms.linux-x64-musl"]
-checksum = "sha256:7194849d0b20a8dee67a36c700cda616a02285070003bd8bf336a3146c1a8a22"
-url = "https://github.com/chriserin/ft/releases/download/0.1.2/ft-0.1.2-linux-amd64.tar.gz"
-url_api = "https://api.github.com/repos/chriserin/ft/releases/assets/523956343"
-
-[tools."github:chriserin/ft"."platforms.macos-arm64"]
-checksum = "sha256:6f79ca696e934cddb24e3cd80d2b3d9f85bd69997f821986feded6d84dcb575f"
-url = "https://github.com/chriserin/ft/releases/download/0.1.2/ft-0.1.2-darwin-arm64.tar.gz"
-url_api = "https://api.github.com/repos/chriserin/ft/releases/assets/523956341"
-
-[tools."github:chriserin/ft"."platforms.macos-x64"]
-checksum = "sha256:aa2dab18cfe438463c870da260d2b5d73cf5d793563680626edd4a93e3fa30fd"
-url = "https://github.com/chriserin/ft/releases/download/0.1.2/ft-0.1.2-darwin-amd64.tar.gz"
-url_api = "https://api.github.com/repos/chriserin/ft/releases/assets/523956344"
-
-[tools."github:chriserin/ft"."platforms.windows-x64"]
-checksum = "sha256:3c1b37cceebbdf6bcf9c724318fe24f023f1ae6caf3ebac3ccdb26e9494cc780"
-url = "https://github.com/chriserin/ft/releases/download/0.1.2/ft-0.1.2-windows-amd64.zip"
-url_api = "https://api.github.com/repos/chriserin/ft/releases/assets/523956342"
-
 [[tools."github:chriserin/shy"]]
 version = "0.1.15"
 backend = "github:chriserin/shy"
