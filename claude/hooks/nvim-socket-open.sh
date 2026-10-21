@@ -11,9 +11,11 @@ FILE_PATH=$(echo "$INPUT" | jq -r '.tool_input.file_path' 2>/dev/null)
 # newStart is the beginning of the patch, we need to find the first + line
 NEW_START=$(echo "$INPUT" | jq -r '.tool_response.structuredPatch[0].newStart // empty' 2>/dev/null)
 
-# Find the offset to the first + line in the patch
+# Find the offset to the first + line in the patch, ignoring removed (-) lines
+# since they don't exist in the new file
 PLUS_LINE_OFFSET=$(echo "$INPUT" | jq -r '
   .tool_response.structuredPatch[0].lines // []
+  | map(select(startswith("-") | not))
   | to_entries
   | map(select(.value | startswith("+")))
   | .[0].key // 0
@@ -26,8 +28,13 @@ else
   EDIT_LINE=""
 fi
 
-# Get the current tmux session name
-SESSION_NAME=$(tmux display-message -p '#{session_name}' 2>/dev/null)
+# Get the current herdr workspace label or tmux session name
+if [ -n "$HERDR_WORKSPACE_ID" ]; then
+  SESSION_NAME=$(herdr workspace get "$HERDR_WORKSPACE_ID" 2>/dev/null | jq -r '.result.workspace.label // empty')
+  SESSION_NAME="${SESSION_NAME//[^A-Za-z0-9_.-]/_}"
+else
+  SESSION_NAME=$(tmux display-message -p '#{session_name}' 2>/dev/null)
+fi
 
 # Only proceed if we have both file path and session name
 if [ -z "$FILE_PATH" ] || [ -z "$SESSION_NAME" ]; then

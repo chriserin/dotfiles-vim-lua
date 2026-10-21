@@ -305,16 +305,25 @@ up() {
   cd $p
 }
 
-# open nvim with server id matching current tmux session
-# allows multiple nvim instances with unique server names per tmux session
+# open nvim with server id matching current herdr workspace label or tmux session
+# allows multiple nvim instances with unique server names per workspace/session
 nv() {
-  local session_name=$(tmux display-message -p '#S' 2>/dev/null)
+  local session_name
+  if [ -n "$HERDR_WORKSPACE_ID" ]; then
+    session_name=$(herdr workspace get "$HERDR_WORKSPACE_ID" 2>/dev/null | jq -r '.result.workspace.label // empty')
+    session_name="${session_name//[^A-Za-z0-9_.-]/_}"
+  else
+    session_name=$(tmux display-message -p '#S' 2>/dev/null)
+  fi
+
   if [ -z "$session_name" ]; then
-    # not in tmux, just open nvim normally
+    # not in herdr or tmux, just open nvim normally
     nvim "$@"
   else
     local sock="/tmp/nvim-${session_name}.sock"
-    tmux set-environment NVIM "$sock"
+    if [ -n "$TMUX" ]; then
+      tmux set-environment NVIM "$sock"
+    fi
     nvim --listen "$sock" "$@"
   fi
 }
