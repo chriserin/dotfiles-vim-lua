@@ -10,6 +10,8 @@ enabled = true
 delivery = "terminal"
 
 [ui]
+pane_borders = false
+pane_outer_borders = false
 window_title = "{workspace}"
 show_agent_labels_on_pane_borders = true
 sidebar_collapsed_mode = "hidden"
