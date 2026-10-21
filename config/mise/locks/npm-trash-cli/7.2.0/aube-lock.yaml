@@ -84,8 +84,8 @@ packages:
     resolution: {integrity: sha512-0Ia46fDOaT7k4og1PDW4YbodWWr3scS2vAr2lTbsplOt2WkKp0vQbkI9wKis/T5LV/dqPjO3bpS/z6GTJB82LA==}
     engines: {node: '>=18'}
 
-  ignore@7.0.9:
-    resolution: {integrity: sha512-brTTsvFRt5C1gGHtPst/281UjPD5t9fBqbgoMPlVWy11ZLTPfu7HxK4ZYqO9H7o/yC9rSTCI85EaQ4OoY12qYw==}
+  ignore@7.0.13:
+    resolution: {integrity: sha512-2E8Q6rh+1RRSq/YdaGsNfXsEZy9FVqv6BSSrkmZJP7BnaoPnRfKL+YaofPvP+5rzdk144qSm6i4+hvPgUcbV4Q==}
     engines: {node: '>= 4'}
 
   is-docker@3.0.0:
@@ -171,8 +171,8 @@ packages:
     resolution: {integrity: sha512-vpm09aKwq6H9phqRQzecoDpD8TmVyGw70qmWlyq5onxY7tqyTTFVvxMykxQSQKILBSFlbXpypIw2T1Ml7+DDtw==}
     engines: {node: '>=8'}
 
-  p-map@7.0.8:
-    resolution: {integrity: sha512-MitaVsCuCFIvOLLPIU7NnfrZvS9H9h7kwMUkDo+T2pEISaJD48IV9S8iIdXB7PsvvdxyYcsSTTrr90XKsbulNw==}
+  p-map@7.1.1:
+    resolution: {integrity: sha512-6Lh3jQPLthYujSrlw6ccWXBGZTkoTCz27Hd92g79LH/kjAbgoEu0t442cCCNbegPSJsA0lwDX8z0bcKtkpA32g==}
     engines: {node: '>=18'}
 
   path-key@3.1.1:
@@ -360,12 +360,12 @@ snapshots:
     dependencies:
       '@sindresorhus/merge-streams': 2.3.0
       fast-glob: 3.3.3
-      ignore: 7.0.9
+      ignore: 7.0.13
       path-type: 6.0.0
       slash: 5.1.0
       unicorn-magic: 0.3.0
 
-  ignore@7.0.9: {}
+  ignore@7.0.13: {}
 
   is-docker@3.0.0: {}
 
@@ -428,7 +428,7 @@ snapshots:
 
   p-finally@2.0.1: {}
 
-  p-map@7.0.8: {}
+  p-map@7.1.1: {}
 
   path-key@3.1.1: {}
 
@@ -490,7 +490,7 @@ snapshots:
       globby: 14.1.0
       is-path-inside: 4.0.0
       move-file: 4.1.0
-      p-map: 7.0.8
+      p-map: 7.1.1
       powershell-utils: 0.2.1
       wsl-utils: 0.4.0
       xdg-trashdir: 3.1.0
